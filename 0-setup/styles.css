@@ -1,0 +1,84 @@
+/* 
+====== 
+Fonts
+======
+*/
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300,400&display=swap");
+/* 
+====== 
+Variables 
+======
+*/
+:root {
+  --primaryColor: #2892d7;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.3rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.25rem;
+}
+/* 
+====== 
+Global Styles 
+======
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--mainSpacing);
+}
+p {
+  margin-bottom: 1.25rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--mainBlack);
+}
+/* 
+====== 
+Buttons 
+======
+*/
+.btn {
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  border: 2px solid var(--mainBlack);
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: var(--mainBorderRadius);
+  background: transparent;
+}
+.btn:hover {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+}
