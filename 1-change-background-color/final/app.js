@@ -6,9 +6,13 @@ const color = document.querySelector(".color");
 const body = document.querySelector("body");
 
 btn.addEventListener("click", function() {
-  const randomNumber = Math.floor(Math.random() * colors.length);
+  const randomNumber = getRandomNumber();
   console.log(randomNumber);
 
   body.style.backgroundColor = colors[randomNumber];
   color.textContent = colors[randomNumber];
 });
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * colors.length);
+}
