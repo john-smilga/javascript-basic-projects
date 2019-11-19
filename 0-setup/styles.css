@@ -21,6 +21,8 @@ Variables
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainBorderRadius: 0.25rem;
+  --smallWidth: 85vw;
+  --maxWidth: 1170px;
 }
 /* 
 ====== 

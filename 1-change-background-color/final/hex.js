@@ -6,13 +6,16 @@ const color = document.querySelector(".color");
 const body = document.querySelector("body");
 
 btn.addEventListener("click", function() {
-  const randomNumber = getRandomNumber();
-  // console.log(randomNumber);
+  let hexColor = "#";
+  for (let i = 0; i < 6; i++) {
+    hexColor += hex[getRandomNumber()];
+  }
+  // console.log(hexColor);
 
-  body.style.backgroundColor = colors[randomNumber];
-  color.textContent = colors[randomNumber];
+  color.textContent = hexColor;
+  body.style.backgroundColor = hexColor;
 });
 
 function getRandomNumber() {
-  return Math.floor(Math.random() * colors.length);
+  return Math.floor(Math.random() * hex.length);
 }
