@@ -9,9 +9,10 @@ buttons.forEach(function(btn) {
 
     if (item.classList.contains("decrease")) {
       counterValue--;
-    }
-    if (item.classList.contains("increase")) {
+    } else if (item.classList.contains("increase")) {
       counterValue++;
+    } else {
+      counterValue = 0;
     }
     counter.textContent = counterValue;
     if (counterValue < 0) {
