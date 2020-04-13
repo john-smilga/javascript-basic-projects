@@ -175,6 +175,29 @@ main {
 }
 /*
 =============== 
-Name of the Project
+Reviews
 ===============
 */
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container {
+  width: 90vw;
+  max-width: var(--fixed-width);
+}
+.container img {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: var(--dark-shadow);
+}
+#author {
+  color: var(--clr-grey-1);
+  font-weight: 700;
+  text-transform: capitalize;
+}
