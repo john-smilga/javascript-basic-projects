@@ -18,7 +18,7 @@ Variables
   --clr-primary-3: hsl(205, 72%, 37%);
   --clr-primary-4: hsl(205, 63%, 48%);
   /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
+  --clr-primary-5: #49a6e9;
   /* lighter shades of primary color */
   --clr-primary-6: hsl(205, 89%, 70%);
   --clr-primary-7: hsl(205, 90%, 76%);
@@ -79,8 +79,10 @@ ul {
 a {
   text-decoration: none;
 }
-img:not(.nav-logo) {
+img:not(.logo) {
   width: 100%;
+}
+img {
   display: block;
 }
 
@@ -175,6 +177,6 @@ main {
 }
 /*
 =============== 
-Name of the Project
+Project Name
 ===============
 */
