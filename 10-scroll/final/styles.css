@@ -196,10 +196,7 @@ Scroll
 /* navbar */
 nav {
   background: var(--clr-white);
-  height: 6rem;
-  display: grid;
-  place-items: center;
-  transition: var(--transition);
+  padding: 1rem 1.5rem;
 }
 /* fixed nav */
 .fixed-nav {
@@ -208,7 +205,6 @@ nav {
   left: 0;
   width: 100%;
   background: var(--clr-white);
-  height: 3.5rem;
   box-shadow: var(--light-shadow);
 }
 .fixed-nav .links a {
@@ -217,11 +213,9 @@ nav {
 .fixed-nav .links a:hover {
   color: var(--clr-secondary);
 }
-.nav-center {
-  width: 90vw;
-  max-width: 1170px;
-  margin: 0 auto;
-}
+/* .fixed-nav .links-container {
+  height: auto !important;
+} */
 .nav-header {
   display: flex;
   align-items: center;
@@ -236,19 +230,41 @@ nav {
   cursor: pointer;
 }
 .nav-toggle:hover {
-  color: var(--clr-grey-5);
+  color: var(--clr-secondary);
 }
 .logo {
   height: 50px;
 }
-.links {
-  display: none;
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 200px;
+}
+.links a {
+  background: var(--clr-white);
+  color: var(--clr-grey-5);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  transition: var(--transition);
+  font-weight: bold;
+  padding: 0.75rem 0;
+}
+.links a:hover {
+  color: var(--clr-grey-1);
 }
 @media screen and (min-width: 800px) {
   nav {
     background: transparent;
   }
   .nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -259,10 +275,14 @@ nav {
   .nav-toggle {
     display: none;
   }
+  .links-container {
+    height: auto !important;
+  }
   .links {
     display: flex;
   }
   .links a {
+    background: transparent;
     color: var(--clr-white);
     font-size: 1.1rem;
     text-transform: capitalize;
@@ -271,6 +291,7 @@ nav {
     transition: var(--transition);
     margin: 0 1rem;
     font-weight: bold;
+    padding: 0;
   }
   .links a:hover {
     color: var(--clr-white);
@@ -283,7 +304,7 @@ header {
     url(./hero-bcg.jpeg) center/cover no-repeat;
 }
 .banner {
-  height: calc(100vh - 6rem);
+  min-height: 100vh;
   display: grid;
   place-items: center;
   text-align: center;
