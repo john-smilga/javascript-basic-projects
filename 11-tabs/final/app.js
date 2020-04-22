@@ -6,14 +6,14 @@ about.addEventListener("click", function (e) {
   if (id) {
     // remove selected from other buttons
     btns.forEach(function (btn) {
-      btn.classList.remove("selected");
+      btn.classList.remove("active");
     });
-    e.target.classList.add("selected");
+    e.target.classList.add("active");
     // hide other articles
     articles.forEach(function (article) {
-      article.classList.remove("selected");
+      article.classList.remove("active");
     });
     const element = document.getElementById(id);
-    element.classList.add("selected");
+    element.classList.add("active");
   }
 });

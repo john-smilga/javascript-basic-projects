@@ -250,9 +250,9 @@ About
 .content {
   display: none;
 }
-.tab-btn.selected {
+.tab-btn.active {
   background: var(--clr-white);
 }
-.content.selected {
+.content.active {
   display: block;
 }
