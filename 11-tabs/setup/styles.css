@@ -237,7 +237,7 @@ About
   transition: var(--transition);
   letter-spacing: var(--spacing);
 }
-.tab-btn:hover {
+.tab-btn:hover:not(.active) {
   background: var(--clr-primary-10);
   color: var(--clr-primary-5);
 }
@@ -250,9 +250,9 @@ About
 .content {
   display: none;
 }
-.tab-btn.selected {
+.tab-btn.active {
   background: var(--clr-white);
 }
-.content.selected {
+.content.active {
   display: block;
 }
