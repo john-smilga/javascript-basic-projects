@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Starter</title>
+    <title>Grocery List</title>
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -13,9 +13,38 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>basic javascript project starter - change title</h1>
-    <button class="btn">click me</button>
+    <section class="section-center">
+      <!-- form -->
+      <form class="grocery-form">
+        <p class="alert"></p>
+        <h3>grocery bud</h3>
+        <div class="form-control">
+          <input type="text" id="grocery" placeholder="e.g. eggs" />
+          <button type="submit" class="submit-btn">submit</button>
+        </div>
+      </form>
+      <!-- list -->
+      <div class="grocery-container">
+        <div class="grocery-list"></div>
+        <button class="clear-btn">clear items</button>
+      </div>
+    </section>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
 </html>
+<!-- single item -->
+<!-- <article class="grocery-item">
+  <p class="title">item</p>
+  <div class="btn-container"> -->
+<!-- edit btn -->
+<!-- <button type="button" class="edit-btn">
+      <i class="fas fa-edit"></i>
+    </button> -->
+<!-- delete btn -->
+<!-- <button type="button" class="delete-btn">
+      <i class="fas fa-trash"></i>
+    </button>
+  </div>
+</article> -->
+<!-- end of single item -->
