@@ -10,7 +10,7 @@ const clearBtn = document.querySelector(".clear-btn");
 // edit option
 let editElement;
 let editFlag = false;
-
+let editValue = "";
 // ****** event listeners **********
 
 // submit form
@@ -60,9 +60,10 @@ function addItem(e) {
   } else if (value !== "" && editFlag) {
     editElement.innerHTML = value;
     displayAlert("value changed", "success");
+
+    // edit  local storage
+    editLocalStorage(editValue, value);
     setBackToDefault();
-    // add to local storage
-    addToLocalStorage(value);
   } else {
     displayAlert("please enter value", "danger");
   }
@@ -113,15 +114,15 @@ function editItem(e) {
   // set form value
   grocery.value = editElement.innerHTML;
   editFlag = true;
+  editValue = editElement.innerHTML;
   //
   submitBtn.textContent = "edit";
-  // remove from local storage
-  removeFromLocalStorage(editElement.innerHTML);
 }
 // set backt to defaults
 function setBackToDefault() {
   grocery.value = "";
   editFlag = false;
+  editValue = "";
   submitBtn.textContent = "submit";
 }
 
@@ -144,6 +145,17 @@ function removeFromLocalStorage(grocery) {
   let items = getLocalStorage();
   items = items.filter(function (item) {
     return item !== grocery;
+  });
+  localStorage.setItem("list", JSON.stringify(items));
+}
+function editLocalStorage(oldValue, newValue) {
+  let items = getLocalStorage();
+
+  items = items.map(function (item) {
+    if (item === oldValue) {
+      item = newValue;
+    }
+    return item;
   });
   localStorage.setItem("list", JSON.stringify(items));
 }
