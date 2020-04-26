@@ -10,7 +10,6 @@ const clearBtn = document.querySelector(".clear-btn");
 // edit option
 let editElement;
 let editFlag = false;
-let editValue = "";
 let editID = "";
 // ****** event listeners **********
 
@@ -55,14 +54,14 @@ function addItem(e) {
 
     // append child
     list.appendChild(element);
-    // set value back to empty string
-    grocery.value = "";
     // display alert
     displayAlert("item added to the list", "success");
     // show container
     container.classList.add("show-container");
     // set local storage
     addToLocalStorage(id, value);
+    // set back to default
+    setBackToDefault();
   } else if (value !== "" && editFlag) {
     editElement.innerHTML = value;
     displayAlert("value changed", "success");
@@ -124,7 +123,6 @@ function editItem(e) {
   // set form value
   grocery.value = editElement.innerHTML;
   editFlag = true;
-  editValue = editElement.innerHTML;
   editID = element.dataset.id;
   //
   submitBtn.textContent = "edit";
@@ -133,7 +131,6 @@ function editItem(e) {
 function setBackToDefault() {
   grocery.value = "";
   editFlag = false;
-  editValue = "";
   editID = "";
   submitBtn.textContent = "submit";
 }
