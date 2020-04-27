@@ -190,7 +190,7 @@ Slider
   position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
-  margin-top: 10rem;
+  margin-top: 4rem;
 }
 .slide {
   position: absolute;
@@ -212,8 +212,8 @@ Slider
 }
 .person-img {
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
@@ -236,7 +236,7 @@ Slider
 .nextBtn {
   background: transparent;
   border-color: transparent;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   cursor: pointer;
   margin: 0 0.25rem;
   text-transform: capitalize;
