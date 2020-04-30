@@ -40,7 +40,10 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("fixed-nav");
   }
   // setup back to top link
-  if (height > 500) {
+
+  if (scrollHeight > 500) {
+    console.log("helo");
+
     topLink.classList.add("show-link");
   } else {
     topLink.classList.remove("show-link");
