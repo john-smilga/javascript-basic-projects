@@ -8,6 +8,19 @@ section {
   /* set relative for buttons */
   position: relative;
 }
+.reviews {
+  margin-bottom: 4rem;
+}
+.reviews h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews span {
+  font-size: 0.85em;
+  color: var(--clr-primary-5);
+  margin-right: 1rem;
+}
 .img {
   width: 150px;
   height: 150px;
