@@ -47,6 +47,7 @@ const startSlider = (type) => {
     if (!next) {
       next = container.lastElementChild;
     }
+    next.classList.remove(["next"]);
     next.classList.add("last");
     return;
   }
