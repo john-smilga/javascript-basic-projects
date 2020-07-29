@@ -6,7 +6,7 @@ Or there is a fallback folder in the root
 
 #### 16 - ES6 Slider
 
-(JS Video)[www.johnsmilga.com]
+(JS Video)[https://youtu.be/V26mqoNncO4]
 <br  />
 
 (HTML&CSS Video) [www.johnsmilga.com]
