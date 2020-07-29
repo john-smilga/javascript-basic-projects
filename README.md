@@ -6,6 +6,7 @@
 
 Global CSS in the root (global.css)
 <br />
+
 Project Specific CSS (styles.css)
 
 #### 16 - ES6 Slider
