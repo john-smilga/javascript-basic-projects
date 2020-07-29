@@ -1,9 +1,6 @@
 #### 16 ES6 Slider
 
-###### Javascript Video
+(JS Video)[www.johnsmilga.com]
+<br/>
 
-()[www.johnsmilga.com]
-
-###### HTML&CSS Video
-
-()[www.johnsmilga.com]
+(HTML&CSS Video) [www.johnsmilga.com]
