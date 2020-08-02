@@ -154,7 +154,7 @@ section {
   width: 85vw;
   max-width: var(--fixed-width);
   margin: 0 auto;
-  margin-top: 10rem;
+  margin-top: 5rem;
   text-align: center;
   padding: 1rem 0;
   /* set relative for buttons */
