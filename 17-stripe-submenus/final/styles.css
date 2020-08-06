@@ -167,11 +167,11 @@ Stripe Styles
   content: '';
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 65%;
   top: 0;
   left: 0;
   background: url(./images/hero.svg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -243,9 +243,14 @@ Stripe Styles
 
 /* hero media query */
 @media screen and (min-width: 800px) {
+  .hero::before {
+    background-size: contain;
+    height: 100%;
+  }
   .hero-center {
     grid-template-columns: 2fr 1fr;
     align-items: end;
+
     padding-bottom: 5vh;
   }
 
@@ -261,11 +266,17 @@ Stripe Styles
   }
   .phone-img {
     width: 10rem;
-    padding-bottom: 10vh;
   }
 }
+@media screen and (min-width: 992px) {
+  .phone-img {
+    width: 11rem;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero-center {
+    grid-template-columns: 1fr 1fr;
     padding-bottom: 15vh;
   }
   .hero-info h1 {
@@ -276,7 +287,7 @@ Stripe Styles
     align-self: end;
   }
   .phone-img {
-    width: 15rem;
+    width: 20rem;
   }
 }
 /* sidebar */
