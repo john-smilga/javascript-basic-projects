@@ -42,7 +42,7 @@ Variables
   --radius: 0.75rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1120px;
+  --max-width: 1170px;
   --fixed-width: 620px;
 }
 /*
@@ -249,9 +249,6 @@ Stripe Styles
   }
   .hero-center {
     grid-template-columns: 2fr 1fr;
-    align-items: end;
-
-    padding-bottom: 5vh;
   }
 
   .hero-info h1 {
@@ -268,26 +265,22 @@ Stripe Styles
     width: 10rem;
   }
 }
-@media screen and (min-width: 992px) {
-  .phone-img {
-    width: 11rem;
-  }
-}
 
 @media screen and (min-width: 1200px) {
   .hero-center {
-    grid-template-columns: 1fr 1fr;
-    padding-bottom: 15vh;
+    grid-template-columns: 2fr 1fr;
+    align-items: end;
+    padding-bottom: 10vh;
   }
   .hero-info h1 {
     max-width: 100%;
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .hero-images {
     align-self: end;
   }
   .phone-img {
-    width: 20rem;
+    width: 15rem;
   }
 }
 /* sidebar */
