@@ -262,7 +262,7 @@ Stripe Styles
     justify-self: center;
   }
   .phone-img {
-    width: 10rem;
+    width: 12rem;
   }
 }
 
@@ -270,11 +270,11 @@ Stripe Styles
   .hero-center {
     grid-template-columns: 2fr 1fr;
     align-items: end;
-    padding-bottom: 10vh;
+    padding-bottom: 12vh;
   }
   .hero-info h1 {
     max-width: 100%;
-    font-size: 6.2rem;
+    font-size: 5.5rem;
   }
   .hero-images {
     align-self: end;
@@ -283,6 +283,12 @@ Stripe Styles
     width: 15rem;
   }
 }
+@media screen and (min-width: 1400px) {
+  .hero-center {
+    padding-bottom: 20vh;
+  }
+}
+
 /* sidebar */
 .sidebar-wrapper {
   position: fixed;
