@@ -287,6 +287,9 @@ Stripe Styles
   .hero-center {
     padding-bottom: 20vh;
   }
+  .phone-img {
+    width: 17rem;
+  }
 }
 
 /* sidebar */
