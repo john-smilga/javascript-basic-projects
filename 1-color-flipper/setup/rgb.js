@@ -12,3 +12,8 @@ function getValues() {
   }
   return value;
 }
+
+// get value for alpha
+function getAlphaValues() {
+  return Math.random().toFixed(2);
+}
