@@ -39,7 +39,7 @@ btn.addEventListener("click", function () {
     "hsl(" +
     getRandomNumberHue() +
     "," +
-    hsl[1][50] +
+    getRandomNumberSat() +
     "%," +
     hsl[2][70] +
     "%," +
@@ -51,4 +51,8 @@ btn.addEventListener("click", function () {
 
 function getRandomNumberHue() {
   return Math.floor(Math.random() * hsl[0].length);
+}
+
+function getRandomNumberSat() {
+  return Math.floor(Math.random() * hsl[1].length);
 }
