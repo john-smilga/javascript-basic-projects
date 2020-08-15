@@ -19,7 +19,7 @@ function getAlphaValues() {
 }
 
 // get all values in one array of color
-const rgb = [getValues(), getAlphaValues()];
+const rgb = [getValues()];
 
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
@@ -33,7 +33,7 @@ btn.addEventListener("click", function () {
     "," +
     rgb[0][getRandomNumber()] +
     "," +
-    0.89 +
+    getAlphaValues() +
     ")";
   console.log(rgbColor);
 });
