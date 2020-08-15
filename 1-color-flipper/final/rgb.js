@@ -35,7 +35,6 @@ btn.addEventListener("click", function () {
     "," +
     getAlphaValues() +
     ")";
-  console.log(rgbColor);
 });
 
 function getRandomNumber() {
