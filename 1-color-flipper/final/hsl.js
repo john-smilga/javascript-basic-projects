@@ -29,3 +29,6 @@ function getAlphaValues() {
 
 // get all values in one array of color
 const hsl = [getHueValues(), getValues(), getValues(), [getAlphaValues(), 1]];
+
+const btn = document.getElementById("btn");
+const color = document.querySelector(".color");
