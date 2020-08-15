@@ -37,11 +37,11 @@ btn.addEventListener("click", function () {
   // hslColor = hsl(222, 50%, 70%, 0.24);
   let hslColor =
     "hsl(" +
-    getRandomNumberHue() +
+    hsl[0][getRandomNumberHue()] +
     "," +
-    getRandomNumberSat() +
+    hsl[1][getRandomNumberSat()] +
     "%," +
-    getRandomNumberLight() +
+    hsl[2][getRandomNumberLight()] +
     "%," +
     getRandomNumberAlpha() +
     ")";
