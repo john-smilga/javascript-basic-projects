@@ -26,3 +26,10 @@ function getHueValues() {
 function getAlphaValues() {
   return Math.random().toFixed(2);
 }
+// get all values in one array of color
+const hsl = [
+  [getHueValues()],
+  [getValues()],
+  [getValues()],
+  [getAlphaValues(), 1],
+];
