@@ -25,7 +25,19 @@ const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 
 btn.addEventListener("click", function () {
-  let rgbColor = "rgb(" + 122 + "," + 124 + "," + 10 + "," + 0.89 + ")";
-
+  let rgbColor =
+    "rgba(" +
+    rgb[0][getRandomNumber()] +
+    "," +
+    rgb[0][getRandomNumber()] +
+    "," +
+    rgb[0][getRandomNumber()] +
+    "," +
+    0.89 +
+    ")";
   console.log(rgbColor);
 });
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * rgb[0].length);
+}
