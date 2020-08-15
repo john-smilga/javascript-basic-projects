@@ -21,3 +21,8 @@ function getHueValues() {
   }
   return value;
 }
+
+// get values for alpha
+function getAlphaValues() {
+  return Math.random().toFixed(2);
+}
