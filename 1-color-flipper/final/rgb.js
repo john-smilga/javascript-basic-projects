@@ -25,5 +25,7 @@ const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 
 btn.addEventListener("click", function () {
-  let rgbColor;
+  let rgbColor = "rgb(" + 122 + "," + 124 + "," + 10 + "," + 0.89 + ")";
+
+  console.log(rgbColor);
 });
