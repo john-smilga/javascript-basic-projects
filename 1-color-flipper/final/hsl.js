@@ -61,7 +61,3 @@ function getRandomNumberSat() {
 function getRandomNumberLight() {
   return Math.floor(Math.random() * hsl[2].length);
 }
-
-function getRandomNumberAlpha() {
-  return Math.random(hsl[3][0].length).toFixed(2);
-}
