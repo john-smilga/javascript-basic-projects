@@ -28,7 +28,7 @@ function getAlphaValues() {
 }
 
 // get all values in one array of color
-const hsl = [getHueValues(), getValues(), getValues(), [getAlphaValues(), 1]];
+const hsl = [getHueValues(), getValues(), getValues()];
 
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
@@ -43,7 +43,7 @@ btn.addEventListener("click", function () {
     "%," +
     hsl[2][getRandomNumberLight()] +
     "%," +
-    getRandomNumberAlpha() +
+    getAlphaValues() +
     ")";
 
   color.textContent = hslColor;
