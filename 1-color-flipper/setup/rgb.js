@@ -17,3 +17,6 @@ function getValues() {
 function getAlphaValues() {
   return Math.random().toFixed(2);
 }
+
+// get all values in one array of color
+const rgb = [getValues(), getAlphaValues()];
