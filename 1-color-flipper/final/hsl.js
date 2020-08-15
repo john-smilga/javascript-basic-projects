@@ -32,3 +32,5 @@ const hsl = [getHueValues(), getValues(), getValues(), [getAlphaValues(), 1]];
 
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
+
+btn.addEventListener("click", function () {});
