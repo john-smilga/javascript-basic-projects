@@ -23,3 +23,7 @@ const rgb = [getValues(), getAlphaValues()];
 
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
+
+btn.addEventListener("click", function () {
+  let rgbColor;
+});
