@@ -33,4 +33,18 @@ const hsl = [getHueValues(), getValues(), getValues(), [getAlphaValues(), 1]];
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 
-btn.addEventListener("click", function () {});
+btn.addEventListener("click", function () {
+  // hslColor = hsl(222, 50%, 70%, 0.24);
+  let hslColor =
+    "hsl(" +
+    hsl[0][222] +
+    "," +
+    hsl[1][50] +
+    "%," +
+    hsl[2][70] +
+    "%," +
+    hsl[3][0] +
+    ")";
+
+  console.log(hslColor);
+});
