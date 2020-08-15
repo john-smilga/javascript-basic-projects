@@ -37,7 +37,7 @@ btn.addEventListener("click", function () {
   // hslColor = hsl(222, 50%, 70%, 0.24);
   let hslColor =
     "hsl(" +
-    hsl[0][222] +
+    getRandomNumberHue() +
     "," +
     hsl[1][50] +
     "%," +
@@ -48,3 +48,7 @@ btn.addEventListener("click", function () {
 
   console.log(hslColor);
 });
+
+function getRandomNumberHue() {
+  return Math.floor(Math.random() * hsl[0].length);
+}
