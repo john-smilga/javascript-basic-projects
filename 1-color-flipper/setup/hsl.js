@@ -12,3 +12,12 @@ function getValues() {
   }
   return value;
 }
+
+//get values for hue (0 - 360)
+function getHueValues() {
+  let value = [];
+  for (let i = 0; i <= 360; i++) {
+    value.push(i);
+  }
+  return value;
+}
