@@ -45,8 +45,6 @@ btn.addEventListener("click", function () {
     "%," +
     getRandomNumberAlpha() +
     ")";
-
-  console.log(hslColor);
 });
 
 function getRandomNumberHue() {
