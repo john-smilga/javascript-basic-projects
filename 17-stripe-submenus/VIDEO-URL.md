@@ -1,4 +1,2 @@
-(JS Video)[https://johnsmilga.com]
+[JS Video](https://youtu.be/ypH_XA7PYBI)
 <br  />
-
-(HTML&CSS Video) [https://johnsmilga.com]
