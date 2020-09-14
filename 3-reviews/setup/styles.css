@@ -166,11 +166,10 @@ main {
   margin-bottom: 4rem;
 }
 .underline {
-  height: 0.25rem;
-  width: 5rem;
-  background: var(--clr-primary-5);
-  margin-left: auto;
-  margin-right: auto;
+  height: 0.5rem;
+  width: 6rem;
+  background-color: var(--clr-primary-5);
+  margin: 0 auto;
 }
 .container {
   width: 80vw;
@@ -189,19 +188,19 @@ main {
 }
 .img-container {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   margin: 0 auto;
   margin-bottom: 1.5rem;
 }
 #person-img {
-  width: 100%;
-  display: block;
-  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  height: 100%;
+  width: 100%;
   position: relative;
+  border-radius: 50%;
+  display: block;
 }
 .img-container::after {
   font-family: "Font Awesome 5 Free";
@@ -210,12 +209,12 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  transform: translateY(25%);
+  transform: translateY(40%);
   background: var(--clr-primary-5);
   color: var(--clr-white);
 }
@@ -225,8 +224,8 @@ main {
   height: 100%;
   background: var(--clr-primary-5);
   position: absolute;
-  top: -0.25rem;
-  right: -0.5rem;
+  top: -3%;
+  right: -3%;
   border-radius: 50%;
 }
 #author {
@@ -244,12 +243,16 @@ main {
 .prev-btn,
 .next-btn {
   color: var(--clr-primary-7);
-  font-size: 1.25rem;
+  font-size: 2rem;
   background: transparent;
   border-color: transparent;
   margin: 0 0.5rem;
   transition: var(--transition);
   cursor: pointer;
+}
+.prev-btn:focus,
+.next-btn:focus {
+  outline: none;
 }
 .prev-btn:hover,
 .next-btn:hover {
@@ -258,14 +261,18 @@ main {
 .random-btn {
   margin-top: 0.5rem;
   background: var(--clr-primary-10);
-  color: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
   padding: 0.25rem 0.5rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   border-radius: var(--radius);
   transition: var(--transition);
   border-color: var(--clr-primary-5);
   cursor: pointer;
 }
+
 .random-btn:hover {
   background: var(--clr-primary-5);
   color: var(--clr-primary-1);
