@@ -14,7 +14,43 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>review project</h1>
+    <main>
+      <section class="container">
+        <div class="title">
+          <h1>Our reviews</h1>
+          <div class="underline"></div>
+        </div>
+        <article class="review">
+          <div class="img-container">
+            <img
+              id="person-img"
+              src="./person-1.jpeg"
+              alt="Sara Jones picture"
+              title="Picture of Reviewer"
+            />
+          </div>
+          <h4 id="author">Sara Jones</h4>
+          <p id="job">ux designer</p>
+          <p id="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic minima
+            aspernatur maiores dicta iusto? Quibusdam aperiam fugit unde eius
+            fuga rerum mollitia laborum distinctio quas possimus incidunt
+            aspernatur beatae dolore dolor facere quae in ipsam veritatis enim
+            dicta corrupti, molestiae consequatur blanditiis consequuntur.
+            Dignissimos consequuntur corporis amet, nostrum aliquid totam.
+          </p>
+          <div class="button-container">
+            <button class="prev-btn" title="Previous Review">
+              <i class="fas fa-arrow-circle-left"></i>
+            </button>
+            <button class="next-btn" title="Next Review">
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+          <button class="random-btn">Surprise me!</button>
+        </article>
+      </section>
+    </main>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
