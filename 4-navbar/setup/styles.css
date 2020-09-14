@@ -176,7 +176,9 @@ nav {
 }
 .nav-toggle:hover {
   color: var(--clr-primary-1);
-  transform: rotate(90deg);
+}
+.nav-toggle:focus {
+  outline: none;
 }
 .logo {
   height: 40px;
@@ -199,9 +201,9 @@ nav {
   display: none;
 }
 .links {
-  height: 0;
-  overflow: hidden;
   transition: var(--transition);
+  overflow: hidden;
+  height: 0;
 }
 .show-links {
   height: 10rem;
