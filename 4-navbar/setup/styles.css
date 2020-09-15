@@ -173,6 +173,7 @@ nav {
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
+  animation: 2s bounce ease-out infinite;
 }
 .nav-toggle:hover {
   color: var(--clr-primary-1);
@@ -245,5 +246,11 @@ nav {
   }
   .social-icons a:hover {
     color: var(--clr-primary-7);
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: scale(1.25);
   }
 }
