@@ -168,18 +168,15 @@ Sidebar
   cursor: pointer;
   animation: bounce 2s ease-in-out infinite;
 }
+.sidebar-toggle:focus {
+  outline: none;
+}
 .sidebar-toggle:hover {
   color: var(--clr-primary-7);
 }
 @keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
   50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
+    transform: scale(1.15);
   }
 }
 
@@ -227,7 +224,7 @@ Sidebar
 }
 .social-icons a {
   font-size: 1.5rem;
-  margin: 0 0.5rem;
+  margin: 0 0.75rem;
   color: var(--clr-primary-5);
   transition: var(--transition);
 }
@@ -239,18 +236,22 @@ Sidebar
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 70%;
   background: var(--clr-white);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  /* grid-template-rows: auto 1fr auto; */
   row-gap: 1rem;
   box-shadow: var(--clr-red-dark);
   transition: var(--transition);
-  transform: translate(-100%);
+  transform: translateX(-150%);
 }
 .show-sidebar {
-  transform: translate(0);
+  transform: translateX(0);
 }
 @media screen and (min-width: 676px) {
   .sidebar {
