@@ -224,7 +224,7 @@ Sidebar
 }
 .social-icons a {
   font-size: 1.5rem;
-  margin: 0 0.5rem;
+  margin: 0 0.75rem;
   color: var(--clr-primary-5);
   transition: var(--transition);
 }
