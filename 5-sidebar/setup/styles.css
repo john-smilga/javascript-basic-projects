@@ -239,8 +239,12 @@ Sidebar
   width: 70%;
   height: 70%;
   background: var(--clr-white);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  /* grid-template-rows: auto 1fr auto; */
   row-gap: 1rem;
   box-shadow: var(--clr-red-dark);
   transition: var(--transition);
