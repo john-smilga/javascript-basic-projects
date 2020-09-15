@@ -183,7 +183,7 @@ Modal
 */
 .hero {
   min-height: 100vh;
-  background: url("./hero.jpeg") center/cover no-repeat;
+  background: url("./hero.jpeg") center/cover;
   display: grid;
   place-items: center;
 }
@@ -218,11 +218,14 @@ Modal
   transition: var(--transition);
   visibility: hidden;
   z-index: -10;
+  opacity: 0;
+  transition: visibility 0s, opacity 1s ease-out;
 }
 /* OPEN/CLOSE MODAL */
 .open-modal {
-  visibility: visible;
   z-index: 10;
+  visibility: visible;
+  opacity: 1;
 }
 .modal-container {
   background: var(--clr-white);
@@ -234,11 +237,15 @@ Modal
   display: grid;
   place-items: center;
   position: relative;
+  transition: all 2s ease-out;
+  border: 2px solid rgb(19, 4, 226);
+  text-align: left;
+  padding: 0 2rem;
 }
 .close-btn {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 0.5rem;
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
