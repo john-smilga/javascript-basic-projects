@@ -197,8 +197,8 @@ Questions
   background: var(--clr-white);
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  margin-bottom: 2rem;
+  padding: 1rem 1rem 0rem 1rem;
+  margin-bottom: 1rem;
 }
 .question-title {
   display: flex;
@@ -219,9 +219,14 @@ Questions
   cursor: pointer;
   color: var(--clr-gold);
   transition: var(--transition);
+  animation: bouncing 2s ease-out infinite;
+}
+.question-btn:focus {
+  outline: none;
 }
 .question-btn:hover {
-  transform: rotate(90deg);
+  transform: scale(1.25);
+  color: rgb(248, 7, 7);
 }
 .question-text {
   padding: 1rem 0 1.5rem 0;
@@ -231,7 +236,7 @@ Questions
   margin-bottom: 0;
 }
 /* hide text */
-/* .question-text {
+.question-text {
   display: none;
 }
 .show-text .question-text {
@@ -245,4 +250,9 @@ Questions
 }
 .show-text .plus-icon {
   display: none;
-} */
+}
+@keyframes bouncing {
+  50% {
+    transform: translateY(10%);
+  }
+}
