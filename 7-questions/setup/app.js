@@ -3,8 +3,7 @@ const questions = document.querySelectorAll(".question");
 
 questions.forEach((question) => {
   const btn = question.querySelector(".question-btn");
-  console.log(btn);
-  btn.addEventListener("click", (params) => {
+  btn.addEventListener("click", () => {
     questions.forEach((item) => {
       item !== question ? item.classList.remove("show-text") : false;
     });
@@ -21,3 +20,9 @@ btns.forEach((button) => {
     question.classList.toggle("show-text");
   });
 }); */
+
+/* function toggleIcon(element, awesomeIconName1, awesomeIconName2) {
+  element.className === awesomeIconName1
+    ? (element.className = awesomeIconName2)
+    : (element.className = awesomeIconName1);
+} */

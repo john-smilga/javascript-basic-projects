@@ -69,11 +69,17 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  background: url(martin-adams-YA-DFlSzXBE-unsplash.jpg) 48% 52% no-repeat fixed; /* linear-gradient(
+      to top,
+      #a18cd1 0%,
+      #fbc2eb 100%
+    )
+    no-repeat; */
+  background-size: cover;
   line-height: 1.5;
   font-size: 0.875rem;
 }
+
 ul {
   list-style-type: none;
 }
@@ -111,7 +117,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-1);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -183,13 +189,20 @@ Questions
 */
 .title {
   margin-top: 15vh;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .title h2 {
   color: var(--clr-gold);
   font-family: "Great Vibes", cursive;
   text-align: center;
+  position: relative;
 }
+h2 > span.bg-text {
+  background-color: var(--clr-white);
+  padding: 0.75rem;
+  border-radius: var(--radius);
+}
+
 .section-center {
   max-width: var(--fixed-width);
 }
@@ -199,7 +212,12 @@ Questions
   box-shadow: var(--light-shadow);
   padding: 1rem 1rem 0rem 1rem;
   margin-bottom: 1rem;
+  transition: background 0.5s ease-out;
 }
+/* .question.show-text {
+  background: rgba(1);
+} */
+
 .question-title {
   display: flex;
   justify-content: space-between;
@@ -224,9 +242,10 @@ Questions
 .question-btn:focus {
   outline: none;
 }
+
 .question-btn:hover {
   transform: scale(1.25);
-  color: rgb(248, 7, 7);
+  color: var(--clr-red-light);
 }
 .question-text {
   padding: 1rem 0 1.5rem 0;
@@ -241,7 +260,9 @@ Questions
 }
 .show-text .question-text {
   display: block;
+  font-weight: 700;
 }
+
 .minus-icon {
   display: none;
 }
@@ -254,5 +275,11 @@ Questions
 @keyframes bouncing {
   50% {
     transform: translateY(10%);
+  }
+}
+
+@media only screen and (max-width: 276px) {
+  .bg-text {
+    display: inline-block;
   }
 }
