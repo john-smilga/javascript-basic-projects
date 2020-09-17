@@ -152,6 +152,7 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
 }
+
 .btn:hover {
   color: var(--clr-white);
   background: var(--clr-black);
@@ -187,7 +188,7 @@ Menu
   margin-right: auto;
 }
 .btn-container {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
 }
@@ -207,6 +208,9 @@ Menu
 .filter-btn:hover {
   background: var(--clr-gold);
   color: var(--clr-white);
+}
+.filter-btn:focus {
+  outline: none;
 }
 .section-center {
   width: 90vw;
@@ -229,7 +233,7 @@ Menu
 }
 .item-info header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   border-bottom: 0.5px dotted var(--clr-grey-5);
 }
 .item-info h4 {
