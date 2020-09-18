@@ -218,6 +218,7 @@ nav {
 } */
 .nav-header {
   display: flex;
+  /* place-items: center space-between; */
   align-items: center;
   justify-content: space-between;
 }
@@ -231,6 +232,10 @@ nav {
 }
 .nav-toggle:hover {
   color: var(--clr-secondary);
+}
+
+.nav-toggle:focus {
+  outline: none;
 }
 .logo {
   height: 50px;
@@ -275,6 +280,7 @@ nav {
   .nav-toggle {
     display: none;
   }
+
   .links-container {
     height: auto !important;
   }
