@@ -29,39 +29,69 @@ const reviews = [{
   },
 ];
 
-let index = [];
+let index = 0;
 let nextBtn = document.querySelector('.next-btn');
 let preBtn = document.querySelector('.prev-btn');
+let btnCon = document.querySelector('.button-container');
 let img = document.querySelector('#person-img');
 let author = document.querySelector('#author');
 let job = document.querySelector('#job');
 let info = document.querySelector('#info');
+let randomBtn = document.querySelector('.random-btn');
 
 function ui() {
   img.src = reviews[index].img;
   author.innerHTML = reviews[index].name;
   job.innerHTML = reviews[index].job;
   info.innerHTML = reviews[index].text;
-}
 
+}
+/*
 function CardChange() {
-   ui()
+  index = index + 1;
+  ui()
   console.log(index, reviews.length-1);
-  if (index >= reviews.length-1) {
-    index = -1
-  }
-   index.push(index);
 }
-
 function ChangeCard() {
-  ui();
   index = index - 1;
+  ui();
   console.log(index);
 }
+*/
+function ChangeCard(e) {
+  if (e.target.classList.contains('fa-chevron-right')) {
+    index = index + 1;
+    if (index >= 0 && index < reviews.length) {
+      ui()
+    } else {
+      index = 0;
+      ui();
+    }
+  }
 
-console.log(index);
+  if (e.target.classList.contains('fa-chevron-left')) {
+   index = index - 1;
+     if(index <= 0){
+      index = reviews.length;
+    }else{
+      ui();
+    }
+  }
+}
 
+function surprise() {
+  index = RandomReview();
+  console.log(index);
+  ui();
+}
+
+function RandomReview() {
+  return Math.floor(Math.random() * reviews.length)
+}
+/*
 nextBtn.addEventListener('click', CardChange);
-
 preBtn.addEventListener('click', ChangeCard);
-console.log(preBtn);
+*/
+btnCon.addEventListener('click', ChangeCard)
+randomBtn.addEventListener('click', surprise);
+ui();
