@@ -1,3 +1,4 @@
+
 /*
 =============== 
 Fonts
@@ -72,6 +73,7 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+  max-height: 100vh;
 }
 ul {
   list-style-type: none;
@@ -158,36 +160,17 @@ Nav
 */
 nav {
   background: var(--clr-white);
-  height: 3rem;
-  display: grid;
-  align-items: center;
+  height: 4.5rem;
   box-shadow: var(--dark-shadow);
 }
-.nav-center {
-  width: 90vw;
-  max-width: var(--fixed-width);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.navbar-brand { 
+ font-weight: 900;
+ color: aqua;
+ font-size: 2rem;
 }
-.nav-center h4 {
-  margin-bottom: 0;
-  color: var(--clr-primary-5);
-}
-.nav-links {
-  display: flex;
-}
-nav a {
-  text-transform: capitalize;
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--clr-primary-1);
-  letter-spacing: var(--spacing);
-  margin-right: 1rem;
-}
-nav a:hover {
-  color: var(--clr-primary-5);
+.nav-item{
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 /*
 =============== 
@@ -227,8 +210,32 @@ main {
   border-radius: var(--radius);
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
+  animation: shadow-pulse 2s infinite;
+  text-transform: uppercase;
+}
+
+@keyframes shadow-pulse {
+  0%{
+    box-shadow:  0 0 0 0px rgba(0,0,0,0.7);
+  }
+  100%{
+      box-shadow:  0 0 0 20px rgba(0,0,0,0);
+  }
 }
 .btn-hero:hover {
   color: var(--clr-white);
   background: var(--clr-black);
+}
+
+@media screen and (max-width: 1020px) {
+  .form-control , 
+  .btn-outline-success{
+    display: none;
+  }
+  .navbar-brand{
+    margin-left: 0;
+  }
+  .nav-item{
+    margin-right: 0;
+  }
 }
