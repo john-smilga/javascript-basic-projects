@@ -250,6 +250,7 @@ main {
   margin: 0 0.5rem;
   transition: var(--transition);
   cursor: pointer;
+  outline: none;
 }
 .prev-btn:hover,
 .next-btn:hover {
