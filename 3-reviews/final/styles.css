@@ -250,6 +250,7 @@ main {
   margin: 0 0.5rem;
   transition: var(--transition);
   cursor: pointer;
+  outline: none;
 }
 .prev-btn:hover,
 .next-btn:hover {
@@ -265,6 +266,7 @@ main {
   transition: var(--transition);
   border-color: var(--clr-primary-5);
   cursor: pointer;
+  outline: none;
 }
 .random-btn:hover {
   background: var(--clr-primary-5);
