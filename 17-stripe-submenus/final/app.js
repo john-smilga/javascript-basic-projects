@@ -40,7 +40,7 @@ linkBtns.forEach((btn) => {
     const center = (tempBtn.left + tempBtn.right) / 2;
     const bottom = tempBtn.bottom - 3;
 
-    const tempPage = sublinks.find((link) => link.page === text);
+    const tempPage = sublinks.find((link) => link.page === text); // use trim() method on text (text.trim()) if console.log(tempPage) outputs undefined OR remove any white spaces in you HTML content
     if (tempPage) {
       const { page, links } = tempPage;
       submenu.classList.add('show');
