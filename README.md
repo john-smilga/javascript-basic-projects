@@ -1,3 +1,3 @@
 ## You can see all projects in action here
 
-[Projects](https://www.vanillajavascriptprojects.com/)
+[Color Flipper](https://mutheus.github.io/javascript-basic-projects/1-color-flipper)  
