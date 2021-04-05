@@ -6,3 +6,6 @@
 
 [3 - Reviews](https://mutheus.github.io/javascript-basic-projects/3-reviews)  
 *Now the random button will not show the same person in a row*  
+
+[4 - Navbar](https://mutheus.github.io/javascript-basic-projects/4-navbar)  
+*Hamburger rotating and changing color on click*  
