@@ -13,4 +13,6 @@
 [5 - Sidebar](https://mutheus.github.io/javascript-basic-projects/5-sidebar)  
 
 [6 - Modal](https://mutheus.github.io/javascript-basic-projects/6-modal)  
-*Click outside the container to close the modal added*
+*Click outside the container to close the modal added*  
+
+[7 - Questions](https://mutheus.github.io/javascript-basic-projects/7-questions)  
