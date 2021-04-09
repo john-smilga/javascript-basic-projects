@@ -71,29 +71,74 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "steak dinner",
+    category: "dinner",
+    price: 39.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
+const sectionCenter = document.querySelector('.section-center');
+const btnContainer = document.querySelector('.btn-container');
 
-const sectionCenter = document.querySelector(".section-center");
+window.addEventListener('DOMContentLoaded', () => {
+  displayFilterBtns();
+  displayMenuItems(menu);
+});
 
-window.addEventListener("DOMContentLoaded", function () {
-  let displayMenu = menu.map(function (item) {
-    // console.log(item);
+function displayFilterBtns() {
+  const filters = menu.reduce((acc, curr) => {
+    if (!acc.includes(curr.category)) {
+      acc.push(curr.category);
+    }
+    
+    return acc;
+  }, ['all']);
+  
+  btnContainer.innerHTML = filters.map(item => {
+    return `<button class="filter-btn" type="button" data-id="${item}">${item}</button>`;
+  }).join('');
+  
+  const filterBtn = document.querySelectorAll('.filter-btn');
+  filterMenuItems(filterBtn);
+}
 
+function filterMenuItems(btns) {
+  btns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const category = e.currentTarget.dataset.id;
+      
+      const filteredMenu = menu.filter(menuItem => {
+        return category === menuItem.category;
+      });
+      
+      if (category === 'all') {
+        return displayMenuItems(menu);
+      } 
+      
+      displayMenuItems(filteredMenu);
+    });
+  });
+}
+
+function displayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(item => {
     return `<article class="menu-item">
-          <img src=${item.img} alt=${item.title} class="photo" />
+          <img class="photo" src="${item.img}" alt="Menu item">
+          
           <div class="item-info">
             <header>
               <h4>${item.title}</h4>
+              
               <h4 class="price">$${item.price}</h4>
             </header>
-            <p class="item-text">
-              ${item.desc}
-            </p>
+            
+            <p class="item-text">${item.desc}</p>
           </div>
         </article>`;
-  });
-  displayMenu = displayMenu.join("");
-  console.log(displayMenu);
-
+  }).join('');
+  
   sectionCenter.innerHTML = displayMenu;
-});
+}
