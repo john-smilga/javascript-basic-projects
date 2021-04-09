@@ -16,3 +16,5 @@
 *Click outside the container to close the modal added*  
 
 [7 - Questions](https://mutheus.github.io/javascript-basic-projects/7-questions)  
+
+[8 - Menu](https://mutheus.github.io/javascript-basic-projects/8-menu)  
