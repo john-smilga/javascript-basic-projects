@@ -18,3 +18,5 @@
 [7 - Questions](https://mutheus.github.io/javascript-basic-projects/7-questions)  
 
 [8 - Menu](https://mutheus.github.io/javascript-basic-projects/8-menu)  
+
+[9 - Video](https://mutheus.github.io/javascript-basic-projects/9-video)   
