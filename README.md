@@ -20,3 +20,5 @@
 [8 - Menu](https://mutheus.github.io/javascript-basic-projects/8-menu)  
 
 [9 - Video](https://mutheus.github.io/javascript-basic-projects/9-video)   
+
+[10 - Scroll](https://mutheus.github.io/javascript-basic-projects/10-scroll)   
