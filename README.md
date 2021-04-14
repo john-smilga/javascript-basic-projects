@@ -22,3 +22,5 @@
 [9 - Video](https://mutheus.github.io/javascript-basic-projects/9-video)   
 
 [10 - Scroll](https://mutheus.github.io/javascript-basic-projects/10-scroll)   
+
+[11 - Tabs](https://mutheus.github.io/javascript-basic-projects/11-tabs)   
