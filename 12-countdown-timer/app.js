@@ -26,7 +26,12 @@ const giveawayInfo = document.querySelector('.giveaway');
 const container = document.querySelector('.deadline');
 const deadline = document.querySelectorAll('.deadline-format h4');
 
-let date = new Date(2021, 3, 22, 9, 6, 0);
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDate();
+
+let date = new Date(tempYear, tempMonth, tempDay + 10, 9, 6, 0);
 
 const year = date.getFullYear();
 const day = date.getDate();
