@@ -24,3 +24,5 @@
 [10 - Scroll](https://mutheus.github.io/javascript-basic-projects/10-scroll)   
 
 [11 - Tabs](https://mutheus.github.io/javascript-basic-projects/11-tabs)   
+
+[12 - Countdown Timer](https://mutheus.github.io/javascript-basic-projects/12-countdown-timer)   
