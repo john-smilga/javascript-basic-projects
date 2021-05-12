@@ -30,3 +30,5 @@
 [13 - Lorem Ipsum](https://mutheus.github.io/javascript-basic-projects/13-lorem-ipsum)   
 
 [14 - Grocery Bud](https://mutheus.github.io/javascript-basic-projects/14-grocery-bud)   
+
+[15 - Slider](https://mutheus.github.io/javascript-basic-projects/15-slider)   
