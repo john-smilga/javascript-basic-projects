@@ -33,4 +33,4 @@
 
 [15 - Slider](https://mutheus.github.io/javascript-basic-projects/15-slider)   
 
-[16 - ES6 Slider](https://mutheus.github.io/javascript-basic-projects/16-es6-slider)   
+[16 - ES6 Slider](https://mutheus.github.io/javascript-basic-projects/16-ES6-slider)   
