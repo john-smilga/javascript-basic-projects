@@ -4,6 +4,7 @@ const reviews = [
     id: 1,
     name: "susan smith",
     job: "web developer",
+    age: "about four",
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
     text:
@@ -13,6 +14,7 @@ const reviews = [
     id: 2,
     name: "anna johnson",
     job: "web designer",
+    age: "twelve",
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg",
     text:
@@ -22,6 +24,7 @@ const reviews = [
     id: 3,
     name: "peter jones",
     job: "intern",
+    age: "baby",
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
     text:
@@ -31,6 +34,7 @@ const reviews = [
     id: 4,
     name: "bill anderson",
     job: "the boss",
+    age: "really old",
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg",
     text:
@@ -42,6 +46,7 @@ const img = document.getElementById("person-img");
 const author = document.getElementById("author");
 const job = document.getElementById("job");
 const info = document.getElementById("info");
+const age = document.getElementById("ageval");
 
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
@@ -57,6 +62,7 @@ window.addEventListener("DOMContentLoaded", function () {
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
+  age.textContent = item.age;
 });
 
 // show person based on item
@@ -66,6 +72,7 @@ function showPerson(person) {
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
+  age.textContent = item.age;
 }
 // show next person
 nextBtn.addEventListener("click", function () {
