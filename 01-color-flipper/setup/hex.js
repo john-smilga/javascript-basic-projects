@@ -6,9 +6,9 @@ const color = document.querySelector('.color');
 btn.addEventListener('click', function() {
   let color_hash = '#';
   for ( let i = 0; i < 6; i++ ) {
-    let randomNumber = getRandomNumber;
-    color_hash += hex[randomNumber];
+    color_hash += hex[getRandomNumber];
   }
+
   color.textContent = color_hash;
   document.body.style.backgroundColor = color_hash;
 });
