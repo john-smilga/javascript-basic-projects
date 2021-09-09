@@ -1,0 +1,33 @@
+body
+{
+    background-color: lightcoral;
+    height: 100vh;
+}
+.box
+{
+    text-align: center;
+}
+.box h1
+{
+    margin: 30px auto;
+}
+.box p
+{
+    font-size: 50px;
+    margin: 40px auto;
+}
+button
+{
+    font-size: 30px;
+    border-radius: 3px;
+    margin: 60px auto;
+    width: 90px;
+    margin-right: 10px;
+    outline: none;
+    color: #000;
+}
+button:hover
+{
+    color: lightcoral;
+    border: 1px solid #fff;
+}
