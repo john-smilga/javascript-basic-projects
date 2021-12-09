@@ -13,7 +13,57 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>scroll project</h1>
+    <header id="home">
+      <nav id="nav">
+        <div class="nav-center">
+          <div class="nav-header">
+            <img class="logo" src="./logo.svg" alt="logo">
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">about</a>
+              </li>
+              <li>
+                <a href="#services" class="scroll-link">services</a>
+              </li>
+              <li>
+                <a href="#tours" class="scroll-link">tours</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="banner">
+        <div class="container">
+          <h1>scroll project</h1>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
+          <a class="scroll-link btn btn-white" href="#tours">explore tours</a>
+        </div>
+      </div>
+    </header>
+    <section id="about" class="section">
+      <div class="title">
+        <h2>our <span>services</span></h2>
+      </div>
+    </section>
+    <section id="tours" class="section">
+      <div class="title">
+        <h2>featured <span>tours</span></h2>
+      </div>
+    </section>
+    <footer class="section">
+      <p>copyright &copy; backroads trave tours company <span id="date"></span>.all rights reseved</p>
+    </footer>
+    <a class="scroll-link top-link" href="#home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
