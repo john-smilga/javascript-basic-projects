@@ -11,3 +11,32 @@ I just told you! You've killed me! Fry! Quit doing the right thing, you jerk! Mi
   `Man braid celiac synth freegan readymade, pitchfork fam salvia waistcoat lomo bitters gentrify four loko. Pitchfork semiotics post-ironic vegan. Tofu meditation microdosing hashtag semiotics venmo. Flexitarian vape tilde taiyaki. Prism poutine farm-to-table, messenger bag vegan taxidermy tattooed sartorial squid jean shorts fixie selvage trust fund vape.`,
   `Rutters Plate Fleet boom chandler Brethren of the Coast handsomely lookout marooned brigantine knave. Buccaneer gangway jack rum loot spyglass line Jack Tar fore gaff. Gaff topmast scuttle ballast swab draught measured fer yer chains dance the hempen jig Chain Shot yardarm.`,
 ];
+
+const $btn = document.querySelector('.btn');
+const $input = document.querySelector('#amount');
+const $article = document.querySelector('.lorem-text');
+const $section = document.querySelector('.section-center');
+
+function randomText(num=0) {
+    console.log(num);
+    let n = Math.floor(Math.random() * text.length);
+    let _text = text[n];
+    if(num > 0) {
+        for(let i = 0; i < num; i++) {
+            //$article.textContent += `${_text}`;
+           $section.innerHTML += `<article class="lorem-text"><p>${_text}</p></article>`;
+            
+        }
+    } else {
+        $article.textContent = _text;
+    }
+}
+
+$btn.addEventListener('click', function(event) {
+    event.preventDefault();
+    let isNum = +($input.value);
+    ($input.value === " " || isNum <= 0)
+        ? randomText()
+        : randomText(isNum);
+    $input.value = " ";
+});
