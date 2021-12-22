@@ -15,25 +15,29 @@ I just told you! You've killed me! Fry! Quit doing the right thing, you jerk! Mi
 const $btn = document.querySelector('.btn');
 const $input = document.querySelector('#amount');
 const $article = document.querySelector('.lorem-text');
-const $section = document.querySelector('.section-center');
 
 function randomText(num=0) {
-    console.log(num);
     let n = Math.floor(Math.random() * text.length);
     let _text = text[n];
     if(num > 0) {
         for(let i = 0; i < num; i++) {
-            //$article.textContent += `${_text}`;
-           $section.innerHTML += `<article class="lorem-text"><p>${_text}</p></article>`;
+           //$article.textContent += `<p>${_text}</p>`;
+            let $p = document.createElement('p');
+            $p.textContent = _text;
+            $article.appendChild($p);
             
         }
     } else {
-        $article.textContent = _text;
+        //$article.textContent = `<p>${_text}</p>`;
+        let $p = document.createElement('p');
+        $p.textContent = _text;
+        $article.appendChild($p);
     }
 }
 
 $btn.addEventListener('click', function(event) {
     event.preventDefault();
+    $article.textContent = " ";
     let isNum = +($input.value);
     ($input.value === " " || isNum <= 0)
         ? randomText()
