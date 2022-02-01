@@ -1,0 +1,42 @@
+body {
+  font-family: system-ui;
+  text-align: center;
+  margin-top: 40px;
+  background-color: rgb(61, 59, 61);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main * {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+header h4 {
+  font-size: 50px;
+  color: aliceblue;
+}
+label {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+button {
+  background-color: rgb(143, 218, 218);
+  border-radius: 10px;
+  border: 2px solid rgb(143, 218, 218);
+  padding: 10px 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  color: black;
+}
+input[name="Name"] {
+  text-align: center;
+  font-size: large;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  background-color: rgb(61, 59, 61);
+}
