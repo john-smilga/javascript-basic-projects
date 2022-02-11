@@ -86,7 +86,9 @@ prevBtn.addEventListener("click", function () {
 // show random person
 randomBtn.addEventListener("click", function () {
   console.log("hello");
-
-  currentItem = Math.floor(Math.random() * reviews.length);
+  let previousValue = currentItem;
+  do
+    currentItem = Math.floor(Math.random() * reviews.length);
+  while(currentItem == previousValue)
   showPerson(currentItem);
 });
