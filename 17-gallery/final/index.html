@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- nature -->
+    <section class="section nature">
+      <img
+        src="./images/nature-1.jpeg"
+        title="nature-1"
+        class="img"
+        data-id="1"
+        alt="nature-1"
+      />
+      <img
+        src="./images/nature-2.jpeg"
+        title="nature-2"
+        class="img"
+        data-id="2"
+        alt="nature-2"
+      />
+      <img
+        src="./images/nature-3.jpeg"
+        title="nature-3"
+        class="img"
+        data-id="3"
+        alt="nature-3"
+      />
+    </section>
+    <!-- city -->
+    <section class="section city">
+      <img
+        src="./images/city-1.jpeg"
+        title="city-1"
+        data-id="1"
+        class="img"
+        alt="city-1"
+      />
+      <img
+        src="./images/city-2.jpeg"
+        title="city-2"
+        data-id="2"
+        class="img"
+        alt="city-2"
+      />
+      <img
+        src="./images/city-3.jpeg"
+        title="city-3"
+        data-id="3"
+        class="img"
+        alt="city-3"
+      />
+      <img
+        src="./images/city-4.jpeg"
+        title="city-4"
+        data-id="4"
+        class="img"
+        alt="city-4"
+      />
+      <img
+        src="./images/city-5.jpeg"
+        title="city-5"
+        data-id="5"
+        class="img"
+        alt="city-5"
+      />
+    </section>
+
+    <!-- modal -->
+    <div class="modal">
+      <button class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-content">
+        <!-- prev next buttons -->
+        <button class="prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <!-- content -->
+        <img src="./images/city-1.jpeg" class="main-img" alt="" />
+        <h3 class="image-name">image name</h3>
+        <div class="modal-images">
+          <img
+            src="./images/city-1.jpeg"
+            title="city-1"
+            id="1"
+            class="modal-img"
+            alt=""
+          />
+          <img
+            src="./images/city-2.jpeg"
+            title="city-2"
+            id="2"
+            class="modal-img selected"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <script src="app-class.js"></script>
+  </body>
+</html>
