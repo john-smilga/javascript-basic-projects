@@ -218,6 +218,9 @@ Modal
 .prev-btn {
   left: -2.5rem;
 }
+.next-btn {
+  right: -2.5rem;
+}
 @media screen and (min-width: 768px) {
   .prev-btn {
     left: -4rem;
