@@ -8,15 +8,24 @@ btn.addEventListener('click', () => {
 });
 
 const fetchDadJoke = async () => {
-  const response = await fetch(url, {
-    headers: {
-      Accept: 'application/json',
-      'User-Agent': 'learning app',
-    },
-  });
+  result.textContent = 'Loading...';
+  try {
+    const response = await fetch(url, {
+      headers: {
+        Accept: 'application/json',
+        'User-Agent': 'learning app',
+      },
+    });
+    if (!response.ok) {
+      throw new Error(' error');
+    }
+    const data = await response.json();
 
-  const data = await response.json();
-  result.textContent = data.joke;
+    result.textContent = data.joke;
+  } catch (error) {
+    console.log(error.message);
+    result.textContent = 'There was an error...';
+  }
 };
 
 fetchDadJoke();
