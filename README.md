@@ -43,5 +43,4 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 26. Stripe Submenus
 27. Pagination
 28. Wikipedia
-29. Github Users
-30. Comfy Sloth
+29. Comfy Sloth
