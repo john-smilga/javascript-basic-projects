@@ -25,14 +25,24 @@ const giveaway = document.querySelector('.giveaway');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 
+// The Date() constructor and its methods return 24hr time format
+// (Day Month Date Year HH:MM:SS)
+// ex: "Monday July 1 2020 00:25:00"
 let tempDate = new Date();
 let tempYear = tempDate.getFullYear();
 let tempMonth = tempDate.getMonth();
 let tempDay = tempDate.getDate();
 // months are ZERO index based;
-const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
 
-// let futureDate = new Date(2020, 3, 24, 11, 30, 0);
+// Date modifiers to setup the constant futureDate and time.
+// Set futureDate up here, don't modify the const directly. futureDate remains constant after declaration.
+// unless these values are changed prior to next execution.
+let tempDay = tempDate.getDate() + 10;
+let tempHours= 11;
+let tempMinutes= 30;
+let tempSeconds= 0;
+
+const futureDate = new Date(tempYear, tempMonth, tempDay, tempHours, tempMinutes, tempSeconds);
 
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
