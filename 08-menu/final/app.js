@@ -89,7 +89,7 @@ window.addEventListener("DOMContentLoaded", function () {
   displayMenuButtons();
 });
 
-function diplayMenuItems(menuItems) {
+function displayMenuItems(menuItems) {
   let displayMenu = menuItems.map(function (item) {
     // console.log(item);
 
@@ -144,9 +144,9 @@ function displayMenuButtons() {
         }
       });
       if (category === "all") {
-        diplayMenuItems(menu);
+        displayMenuItems(menu);
       } else {
-        diplayMenuItems(menuCategory);
+        displayMenuItems(menuCategory);
       }
     });
   });
