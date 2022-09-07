@@ -166,7 +166,7 @@ nav {
   justify-content: space-between;
   padding: 1rem;
 }
-.nav-toggle {
+#nav-toggle {
   font-size: 1.5rem;
   color: var(--clr-primary-5);
   background: transparent;
@@ -174,9 +174,9 @@ nav {
   transition: var(--transition);
   cursor: pointer;
 }
-.nav-toggle:hover {
+#nav-toggle:hover {
   color: var(--clr-primary-1);
-  transform: rotate(90deg);
+  /* transform: rotate(0deg); */
 }
 .logo {
   height: 40px;
