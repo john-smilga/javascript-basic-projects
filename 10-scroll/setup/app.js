@@ -17,9 +17,9 @@ navToggle.addEventListener("click", function () {
   const linksHeight = links.getBoundingClientRect().height;
 
   if (containerHeight === 0) {
-    linksContainer.getElementsByClassName.height = `${linksHeight}px`;
+    linksContainer.style.height = `${linksHeight}px`;
   } else {
-    linksContainer.getElementsByClassName.height = 0;
+    linksContainer.style.height = 0;
   }
 });
 
