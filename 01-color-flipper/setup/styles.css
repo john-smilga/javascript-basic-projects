@@ -79,6 +79,10 @@ ul {
 a {
   text-decoration: none;
 }
+
+.material-symbols-outlined{
+  font-size: 50px;
+}
 h1,
 h2,
 h3,
