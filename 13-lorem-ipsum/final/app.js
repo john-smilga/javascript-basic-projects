@@ -23,15 +23,15 @@ form.addEventListener("submit", function (e) {
   const value = parseInt(amount.value);
   const random = Math.floor(Math.random() * text.length);
 
-  if (isNaN(value) || value < 0 || value > 9) {
-    result.innerHTML = `<p class="result">${text[random]}</p>`;
-  } else {
-    let tempText = text.slice(0, value);
-    tempText = tempText
-      .map(function (item) {
-        return `<p class="result">${item}</p>`;
-      })
-      .join("");
-    result.innerHTML = tempText;
+  if (isNaN(value) || value <= 0) {
+    result.innerHTML = `<p class="result">${text[random]}</p>`
+  }
+  else {
+      let tempText = ``;
+      for (let i=0,j=0; i<value; i++) {
+          tempText += `<p class="result">${text[j]}</p>`
+          j = (text.length + j - 1) % text.length;
+      }
+      result.innerHTML = tempText;
   }
 });
