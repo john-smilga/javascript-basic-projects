@@ -1,4 +1,4 @@
-const toggleBtn = document.querySelector('.btn');
+const toggleBtn = document.querySelector('button');
 const articlesContainer = document.querySelector('.articles');
 
 toggleBtn.addEventListener('click', () => {
