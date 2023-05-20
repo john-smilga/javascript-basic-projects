@@ -150,12 +150,6 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
     width: 95vw;
   }
-  .prev-btn {
-    left: -4.5rem;
-  }
-  .next-btn {
-    right: -4.5rem;
-  }
 }
 .img {
   width: 100%;
@@ -198,7 +192,7 @@ Modal
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--clr-white);
   background: transparent;
   border-color: transparent;
@@ -208,26 +202,32 @@ Modal
 .prev-btn {
   position: absolute;
   top: 10rem;
-  transform: translateY(-50%);
+  transform: translateX(-50%);
   background: transparent;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: var(--clr-white);
   border-color: transparent;
   cursor: pointer;
 }
-.prev-btn {
-  left: -2.5rem;
+.prev-btn{
+    left:-0.9rem;
 }
-.next-btn {
-  right: -2.5rem;
+.next-btn{
+    right: -2rem;
 }
 @media screen and (min-width: 768px) {
-  .prev-btn {
-    left: -4rem;
-  }
-  .next-btn {
-    right: -4rem;
-  }
+  .close-btn{
+        font-size: 3rem;
+    }
+    .next-btn, .prev-btn{
+        font-size: 2rem;
+    }
+    .prev-btn{
+        left: -2.5rem;
+    }
+    .next-btn{
+        right: -3.9rem;
+    }
 }
 
 .modal-content {
