@@ -1,5 +1,5 @@
 const url = 'https://course-api.com/javascript-store-products';
-
+// Made a change
 const productsDOM = document.querySelector('.products-center');
 
 const fetchProducts = async () => {
