@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Loan Calculator</title>
+        <link rel="stylesheet" href="./calculator.css">
+    </head>
+    <body>
+<div class="col-md-12 paymentCalc">
+    
+      <form id="loanCalc" onsubmit="return false">
+        <div class="col-md-12">
+          <h2>Loan Calculator</h2>
+          <div class="form-group">
+            <label for="vehiclePrice">Vehicle Price ($)</label>
+            <input type="text" onfocus="this.value=''" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="form-control" id="vehiclePrice" placeholder="Vehicle Price">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="downPayment">Down Payment ($)</label>
+            <input type="text" onfocus="this.value=''" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="form-control" id="downPayment" placeholder="Down Payment" value="0">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="tradeValue">Trade In Value ($)</label>
+            <input type="text" onfocus="this.value=''" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="form-control" id="tradeValue" placeholder="Trade In Value" value="0">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="intRate">Interest Rate</label>
+            <input type="text" onfocus="this.value=''" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="form-control" id="intRate" placeholder="Interest Rate" value="3.25">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="loanTerm">Loan Term (Month)</label>
+            <input type="text" onfocus="this.value=''" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="form-control" id="loanTerm" placeholder="Loan Term (ex: 36 Months)">
+          </div>
+        </div>
+        <br/>
+        <div class="submit"></div>
+        <div class="col-md-12">
+            <input type="submit" class="calcBtn" onclick="calculatePayments()"  id="calculate" value="Calulate">
+        </div>
+        <br/>
+        <div>
+            <table>
+            <tr>
+                <td>
+                 <label for="output">Monthly Payment ($)</label>
+                 <input type="text" class ="output" id="MonthlyPayment" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="output">Total Payment ($)</label>
+                    <input type="text" class ="output" id="TTLPayment" disabled>
+                </td>
+            </tr>
+            </table>
+        </div>
+      </form>
+    
+    </div>
+   
+      
+  </div>
+  <script src="./app.js"></script>
+  </body>
+  </html>
