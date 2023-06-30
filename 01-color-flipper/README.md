@@ -1,4 +1,4 @@
-## 랜덤으로 배경색을 바꿀 수 있는 Color Flipper🌈
+# 🌈  Color Flipper
 
 >navbar에 있는 Simple을 누르면 index.html링크로 이동한다.
 colors배열의 값들을 random으로 출력하게 하기위해 Math.floor(Math.random() * colors.length);사용한다.
@@ -11,10 +11,10 @@ hex를 누르면 hex.html로 이동하고 #f438f5이런 형태의 16진수 color
 <img height="400" src="https://velog.velcdn.com/images/cocorig/post/5a07b01e-ff19-40ed-a589-a5318a22d5b6/image.gif"/>
 
 
-### note..📝
+## note..📝
 `textContent`와 `innerText`는 JavaScript에서 DOM 요소의 `텍스트 콘텐츠`에 접근하는 데 사용되는 두 가지 속성
 
-### 차이점은?
+## 차이점은?
  `textContent`: 태그 상관없이 해당 노드가 가지고 있는 텍스트 값을 모두 읽어온다.
  이 속성은 숨겨진 스타일이나 스크립트로 인해 렌더링되지 않는 텍스트도 포함하여 모든 텍스트를 반환합니다. 즉, 숨겨진 요소의 텍스트 내용도 가져온다
 
