@@ -3,8 +3,7 @@ const value = document.querySelector('#value');
 
 let cnt = 0;
 
-//console.log(btns)
-//NodeList(3) [button.btn.decrese, button.btn.reset, button.btn.increse]
+
 
 btns.forEach((btns)=>{ //버튼의 하나씩 돌면서 클린된 버튼에 값을 바꿔줌
     
