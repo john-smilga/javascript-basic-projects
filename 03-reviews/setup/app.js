@@ -32,11 +32,10 @@ const reviews = [
 ];
 
 
-
 const img = document.querySelector('#person-img');
-const author = document.querySelector('#author');// 이름
-const job = document.querySelector('#job'); //직업
-const info = document.querySelector('#info'); //설명
+const author = document.querySelector('#author');
+const job = document.querySelector('#job'); 
+const info = document.querySelector('#info'); 
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('.random-btn');
