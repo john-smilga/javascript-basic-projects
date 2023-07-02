@@ -29,56 +29,65 @@ const reviews = [
     text: 'Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ',
   },
 ];
-// select items
-const img = document.getElementById('person-img');
-const author = document.getElementById('author');
-const job = document.getElementById('job');
-const info = document.getElementById('info');
 
+
+
+const img = document.querySelector('#person-img');
+const author = document.querySelector('#author');// 이름
+const job = document.querySelector('#job'); //직업
+const info = document.querySelector('#info'); //설명
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('.random-btn');
 
-// set starting item
+
+//처음 item을 설정함
 let currentItem = 0;
 
-// load initial item
+// load initial item,바로 DOM 노드를 찾아 핸들러를 등록해 인터페이스를 초기화!!
 window.addEventListener('DOMContentLoaded', function () {
   const item = reviews[currentItem];
   img.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
+  console.log('Dom 준비 완료!')
 });
 
-// show person based on item
-function showPerson(person) {
-  const item = reviews[person];
-  img.src = item.img;
+//공통 함수 
+function showPerson(person){
+  const item = reviews[person]
+  img.src = item.img 
   author.textContent = item.name;
   job.textContent = item.job;
-  info.textContent = item.text;
+  info.textContent =item.text;
 }
-// show next person
-nextBtn.addEventListener('click', function () {
-  currentItem++;
-  if (currentItem > reviews.length - 1) {
-    currentItem = 0;
-  }
-  showPerson(currentItem);
-});
-// show prev person
-prevBtn.addEventListener('click', function () {
-  currentItem--;
-  if (currentItem < 0) {
-    currentItem = reviews.length - 1;
-  }
-  showPerson(currentItem);
-});
-// show random person
-randomBtn.addEventListener('click', function () {
-  console.log('hello');
 
-  currentItem = Math.floor(Math.random() * reviews.length);
-  showPerson(currentItem);
+
+
+//next 버튼을 누르면 crrentItem은 +1
+nextBtn.addEventListener('click', ()=>{
+
+   currentItem += 1;
+   if(currentItem > reviews.length -1){
+    currentItem = 0;
+   }
+   showPerson(currentItem)
+
+})
+
+//prev 버튼을 누르면 crrentItem은 -1
+prevBtn.addEventListener('click', ()=>{
+
+  currentItem -= 1;
+ if(currentItem < 0){
+  currentItem = reviews.length -1;
+ }
+ showPerson(currentItem)
+
+})
+
+randomBtn.addEventListener('click', ()=>{
+  currentItem = Math.floor(Math.random()* reviews.length);
+  showPerson(currentItem)
 });
