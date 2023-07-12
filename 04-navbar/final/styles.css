@@ -131,6 +131,7 @@ p {
 /*  global classes */
 
 /* section */
+
 .section {
   padding: 5rem 0;
 }
@@ -174,9 +175,8 @@ nav {
   transition: var(--transition);
   cursor: pointer;
 }
-.nav-toggle:hover {
-  color: var(--clr-primary-1);
-  transform: rotate(90deg);
+.bars-rotate{
+  transform: rotate(-90deg);
 }
 .logo {
   height: 40px;
