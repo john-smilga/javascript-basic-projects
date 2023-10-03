@@ -7,12 +7,39 @@
     <!-- font-awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <!-- styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <section class="menu">
+      <div class="title">
+        <h2>Our menu</h2>
+        <dv class="underline"></dv>
+      </div>
+      <!-- filter buttons -->
+      <div class="btn-container">
+        <button class="filter-btn" type="button" data-id="all">all</button>
+        <button class="filter-btn" type="button"data-id="breakfast">breakfast</button>
+        <button class="filter-btn" type="button" data-id="lunch">lunch</button>
+        <button class="filter-btn" type="button" data-id="shakes">shakes</button>
+      </div>
+      <!-- menu item -->
+      <div class="section-center">
+        <!-- single item -->
+        <artice class="menu-item">
+          <img src="menu-item.jpeg" class="photo" alt="menu item" />
+          <div class="item-info">
+            <header>
+              <h4>Buttermilk pancakes</h4>
+              <h4 class="price">$15</h4>
+            </header>
+            <p class="item-text">lorem ipsum</p>
+          </div>
+        </artice>
+        <!-- end of single items -->
+      </div>
+    </section>
     <h1>menu project</h1>
     <!-- javascript -->
     <script src="app.js"></script>
