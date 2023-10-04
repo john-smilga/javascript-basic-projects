@@ -1,3 +1,4 @@
+ // items
  const menu = [
   {
     id: 1,
@@ -73,17 +74,28 @@
   },
 ];
 
-const sectionCenter = document.querySelector('.sectionSelector');
-const filterBtns = document.querySelectorAll('filter-btn');
-
-//load items
-window.addEventListener('DOMContentLoaded',function(){
-  displayMenuItems(menu)
+const sectionCenter = document.querySelector('.section-center');
+const filterBtns = document.querySelectorAll('.filter-btn');
+// load items
+window.addEventListener('DOMContentLoaded', function () {
+displayMenuItems(menu)
 });
 //filter items
 filterBtns.forEach(function (btn) {
-  btn.addEventListener('click', function(e){
+  btn.addEventListener('click', function (e){
     const category = e.currentTarget.dataset.id;
+    const menuCategory = menu.filter(function (menuItem) {
+    if(menuItem.category === category){
+      return menuItem;
+    }
+    });
+    // console.log(menuCategory);
+    if(category === 'all'){
+      displayMenuItems(menu);
+    }
+    else{
+      displayMenuItems();
+    }
   });
 });
 
@@ -98,22 +110,23 @@ filterBtns.forEach(function (btn) {
 
 
 
-  function displayMenuItems(menuItems){
-  let displayMenu = menuItems.map(function(item){
-    // console.log(item);
+
+function displayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(function(item) {
+    // mapは配列の中の要素に関数（好きな操作）を実行できる
     return `<artice class="menu-item">
-    <img src=${item.img} class="photo" alt=${item.title} />
-    <div class="item-info">
-      <header>
-        <h4>${item.title}</h4>
-        <h4 class="price">$${item.price}</h4>
-      </header>
-      <p class="item-text">
-      ${item.desc}
-      </p>
-    </div>
-  </artice>`;
-   })
-   displayMenu = displayMenu.join('');
-   sectionCenter.innerHTML = displayMenu;
-};
+        <img src=${item.img} class="photo" alt=${item.title} />
+        <div class="item-info">
+          <header>
+            <h4>${item.title}</h4>
+            <h4 class="price">$${item.price}</h4>
+          </header>
+          <p class="item-text">
+          ${item.desc}
+          </p>
+        </div>
+      </artice>`;
+  });
+  displayMenu = displayMenu.join("");
+  sectionCenter.innerHTML = displayMenu;
+}
