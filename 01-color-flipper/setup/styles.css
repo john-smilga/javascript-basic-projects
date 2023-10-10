@@ -79,6 +79,7 @@ ul {
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -186,9 +187,10 @@ nav a {
   letter-spacing: var(--spacing);
   margin-right: 1rem;
 }
-nav a:hover {
+nav a:hover, .active{
   color: var(--clr-primary-5);
 }
+
 /*
 =============== 
 Container
