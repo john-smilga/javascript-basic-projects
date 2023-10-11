@@ -168,6 +168,7 @@ main {
 #value {
   font-size: 6rem;
   font-weight: bold;
+  
 }
 .btn {
   text-transform: uppercase;
@@ -187,4 +188,12 @@ main {
 .btn:hover {
   color: var(--clr-white);
   background: var(--clr-black);
+}
+
+.negative {
+  color: var(--clr-red-dark)
+}
+
+.positive {
+  color: var(--clr-green-dark)
 }
