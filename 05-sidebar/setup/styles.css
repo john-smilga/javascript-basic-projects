@@ -213,7 +213,7 @@ Sidebar
   text-transform: capitalize;
   padding: 1rem 1.5rem;
   color: var(--clr-grey-5);
-  transition: var(--transition);
+  transition: var(--transition); 
 }
 .links a:hover {
   background: var(--clr-primary-8);
@@ -247,7 +247,7 @@ Sidebar
   row-gap: 1rem;
   box-shadow: var(--clr-red-dark);
   transition: var(--transition);
-  /* transform: translate(-100%); */
+  transform: translate(-100%);
 }
 .show-sidebar {
   transform: translate(0);
