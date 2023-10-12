@@ -13,8 +13,43 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>modal project</h1>
+    <!-- hero -->
+    <header class="hero">
+      <div class="banner">
+        <h1>Modal Project</h1>
+        <button class="btn modal-btn">open modal</button>
+      </div>
+    </header>
+    <!-- end of hero -->
+    <!-- modal -->
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <h3>Modal content</h3>
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+
     <!-- javascript -->
-    <script src="app.js"></script>
+    <script>
+      const modalBtn = document.querySelector(".modal-btn");
+      const closeBtn = document.querySelector(".close-btn");
+      const modal = document.querySelector(".modal-overlay");
+
+      modalBtn.addEventListener("click", () =>
+        modal.classList.add("open-modal")
+      );
+
+      closeBtn.addEventListener("click", () =>
+        modal.classList.remove("open-modal")
+      );
+
+      window.addEventListener("keydown", (e) => {
+        switch (e.key) {
+          case "Escape":
+            modal.classList.remove("open-modal");
+            break;
+        }
+      });
+    </script>
   </body>
 </html>
