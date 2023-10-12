@@ -204,6 +204,8 @@ nav {
 }
 .social-icons {
   display: none;
+  font-size: 1.25rem;
+  
 }
 .links {
   height: 0;
