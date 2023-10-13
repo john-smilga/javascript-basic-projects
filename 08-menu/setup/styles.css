@@ -204,10 +204,17 @@ Menu
   cursor: pointer;
   transition: var(--transition);
 }
-.filter-btn:hover {
+.filter-btn:hover,
+.filter-btn:focus {
   background: var(--clr-gold);
   color: var(--clr-white);
 }
+
+.btn-active {
+  background: var(--clr-gold);
+  color: var(--clr-white);
+}
+
 .section-center {
   width: 90vw;
   margin: 0 auto;

@@ -71,4 +71,88 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "steak dinner",
+    category: "dinner",
+    price: 39.99,
+    img: "./images/item-10.jpeg",
+    desc: "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.",
+  },
 ];
+
+const menuContainer = document.querySelector(".section-center");
+const containerBtn = document.querySelector(".btn-container");
+const btn = document.querySelectorAll(".filter-btn");
+
+// load menu
+window.addEventListener("DOMContentLoaded", () => {
+  //highlight button that shows whole menu when page is loaded
+  displayMenuItems(menu);
+  displayMenuBtns();
+});
+
+//set up menu display to HTML
+const displayMenuItems = (menuItems) => {
+  let displayMenu = menuItems.map((item) => {
+    return `<div class="menu-item">
+    <img class="photo" src=${item.img} alt=${item.title} />
+    <div class="item-info">
+    <header>
+    <h4>${item.title}</h4>
+    <h4 class="price">$${item.price}</h4>
+    </header>
+    <p class="item-text">
+    ${item.desc}
+    </p>
+    </div>
+    </div>`;
+  });
+  displayMenu = displayMenu.join("");
+  menuContainer.innerHTML = displayMenu;
+};
+
+//menu buttons
+const displayMenuBtns = () => {
+  const categories = menu.reduce(
+    (values, item) => {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ["all"]
+  );
+  const categoryBtns = categories
+    .map((category) => {
+      return `<button data-id=${category} type="button" class="filter-btn">${category}</button>`;
+    })
+    .join("");
+
+  containerBtn.innerHTML = categoryBtns;
+  const filterBtns = containerBtn.querySelectorAll(".filter-btn");
+
+  //highlight first button on page load
+  filterBtns[0].classList.add("btn-active");
+
+  //filter items
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      //remove highlight from non-active buttons
+      filterBtns.forEach((otherBtn) => {
+        otherBtn.classList.remove("btn-active");
+      });
+
+      //add highlight to current button
+      e.currentTarget.classList.add("btn-active");
+
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menu.filter((menuItem) => {
+        if (menuItem.category === category || category === "all") {
+          return menuItem;
+        }
+      });
+      displayMenuItems(menuCategory);
+    });
+  });
+};
