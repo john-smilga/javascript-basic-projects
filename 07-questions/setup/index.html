@@ -18,8 +18,97 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>questions project</h1>
+    <div class="questions">
+      <!-- title -->
+      <div class="title">
+        <h2>questions project</h2>
+      </div>
+      <section class="section-center">
+        <!-- start single question -->
+        <div class="question">
+          <div class="question-title">
+            <p>do you accept all major credit cards?</p>
+            <button type="button" class="question-btn">
+              <span class="plus-icon">
+                <i class="far fa-plus-square"></i>
+              </span>
+              <span class="minus-icon">
+                <i class="far fa-minus-square"></i>
+              </span>
+            </button>
+          </div>
+          <div class="question-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
+              hic corporis pariatur maxime ab a nesciunt perferendis corrupti
+              eligendi odio vitae dolorem sit, id quae, incidunt architecto
+              reprehenderit? Aut, nemo!
+            </p>
+          </div>
+        </div>
+        <!-- end single question -->
+        <!-- start single question -->
+        <div class="question">
+          <div class="question-title">
+            <p>do you support local farmers?</p>
+            <button type="button" class="question-btn">
+              <span class="plus-icon">
+                <i class="far fa-plus-square"></i>
+              </span>
+              <span class="minus-icon">
+                <i class="far fa-minus-square"></i>
+              </span>
+            </button>
+          </div>
+          <div class="question-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
+              hic corporis pariatur maxime ab a nesciunt perferendis corrupti
+              eligendi odio vitae dolorem sit, id quae, incidunt architecto
+              reprehenderit? Aut, nemo!
+            </p>
+          </div>
+        </div>
+        <!-- end single question -->
+        <!-- start single question -->
+        <div class="question">
+          <div class="question-title">
+            <p>do you use organic ingrdients?</p>
+            <button type="button" class="question-btn">
+              <span class="plus-icon">
+                <i class="far fa-plus-square"></i>
+              </span>
+              <span class="minus-icon">
+                <i class="far fa-minus-square"></i>
+              </span>
+            </button>
+          </div>
+          <div class="question-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
+              hic corporis pariatur maxime ab a nesciunt perferendis corrupti
+              eligendi odio vitae dolorem sit, id quae, incidunt architecto
+              reprehenderit? Aut, nemo!
+            </p>
+          </div>
+        </div>
+        <!-- end single question -->
+      </section>
+    </div>
+
     <!-- javascript -->
-    <script src="app.js"></script>
+    <script>
+      const questions = document.querySelectorAll(".question");
+
+      questions.forEach((question) => {
+        const btn = question.querySelector(".question-btn");
+        btn.addEventListener("click", () => {
+          questions.forEach((item) => {
+            if (item !== question) item.classList.remove("show-text");
+          });
+          question.classList.toggle("show-text");
+        });
+      });
+    </script>
   </body>
 </html>
