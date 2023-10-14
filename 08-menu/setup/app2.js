@@ -115,7 +115,5 @@ const displayFilterBtns = () => {
     ["all"]
   );
 
-  const categoryBtns = categories.map((btn) => {
-    
-  })
+  const categoryBtns = categories.map((btn) => {});
 };
