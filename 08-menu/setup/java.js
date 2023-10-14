@@ -71,34 +71,17 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
-<<<<<<< HEAD
-  {
-    id: 10,
-    title: "steak dinner",
-    category: "dinner",
-    price: 39.99,
-    img: "./images/item-10.jpeg",
-    desc: "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.",
-  },
-=======
->>>>>>> 9ac2fd2bdcee6f99290c73cceb73adc9a7932690
 ];
 
-const menuContainer = document.querySelector(".section-center");
+const menuItemContainer = document.querySelector(".section-center");
 const btnContainer = document.querySelector(".btn-container");
 
-<<<<<<< HEAD
-//load items
-=======
-//load menu items on page load
->>>>>>> 9ac2fd2bdcee6f99290c73cceb73adc9a7932690
 window.addEventListener("DOMContentLoaded", () => {
   displayMenu(menu);
-  displayFilterBtns();
+  displayBtns();
 });
 
-<<<<<<< HEAD
-//display menu Items
+//display menu item on page
 const displayMenu = (menuItems) => {
   const displayMenuItems = menuItems
     .map((item) => {
@@ -110,23 +93,19 @@ const displayMenu = (menuItems) => {
         <h4 class="price">$${item.price}</h4>
       </header>
       <p class="item-text">
-        ${item.desc}
+       ${item.desc}
       </p>
     </div>
   </div>`;
     })
     .join("");
-  menuContainer.innerHTML = displayMenuItems;
+  menuItemContainer.innerHTML = displayMenuItems;
 };
 
-//display menu  by unique category
-const displayFilterBtns = () => {
-  //get unique category values for buttons
-=======
-//display menu items
-//display filter buttons
-const displayFilterBtns = () => {
->>>>>>> 9ac2fd2bdcee6f99290c73cceb73adc9a7932690
+//filter buttons
+//display buttons on page
+const displayBtns = () => {
+  //pull unique values from categories
   const categories = menu.reduce(
     (values, item) => {
       if (!values.includes(item.category)) {
@@ -137,78 +116,42 @@ const displayFilterBtns = () => {
     ["all"]
   );
 
-<<<<<<< HEAD
-  //display filter buttons
+  //display button categories
   const categoryBtns = categories
     .map((btn) => {
       return `<button data-id=${btn} type="button" class="filter-btn">${btn}</button>`;
     })
     .join("");
+
   btnContainer.innerHTML = categoryBtns;
-  setUpFilterBtns();
+  filterBtn();
 };
 
-//filter menu by button category and add event listners
-
-const setUpFilterBtns = () => {
+const filterBtn = () => {
   const filterBtns = btnContainer.querySelectorAll(".filter-btn");
+
+  //make 'all' menu button highlighted on page load
+  filterBtns[0].classList.add("btn-active");
+
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      btn = e.currentTarget.dataset.id;
+      const category = e.currentTarget.dataset.id;
+      //filter for button categories
       const filterItems = menu.filter((item) => {
-        if (item.category === btn || btn === "all") {
+        if (item.category === category || category === "all") {
           return item;
         }
       });
       displayMenu(filterItems);
 
-      //remove active status to other buttons
-      filterBtns.forEach((otherBtn) => otherBtn.classList.remove("btn-active"));
+      //remove active status on non-current active buttons
+      filterBtns.forEach((otherBtn) => {
+        console.log(otherBtn);
+        otherBtn.classList.remove("btn-active");
+      });
 
-      //add active class to button when clicked
-      e.currentTarget.classList.add("btn-active");
+      //add active status to current active button
+      btn.classList.add("btn-active");
     });
-    //add active to first button on page load
-    filterBtns[0].classList.add("btn-active");
   });
-=======
-  const categoryBtns = categories
-    .map((category) => {
-      return `<button data-id=${category} type="button" class="filter-btn">${category}</button>`;
-    })
-    .join("");
-
-  btnContainer.innerHTML = categoryBtns;
-  const filterBtns = document.querySelectorAll(".filter-btn");
-
-  filterBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const category = e.currentTarget.dataset.id
-      console.log(category)
-    })
-  })
-  
-
-};
-
-const displayMenu = (menuItems) => {
-  const displayMenuItems = menuItems
-    .map((item) => {
-      return `<div class="menu-item">
-    <img class="photo" src=${item.img} alt="${item.title}" />  
-    <div class="item-info">
-      <header>
-        <h4>${item.title}</h4>
-        <h4 class="price">$${item.price}</h4>
-      </header>  
-      <p class="item-text">
-        ${item.desc}
-      </p>  
-    </div>  
-  </div>`;
-    })
-    .join("");
-
-  menuContainer.innerHTML = displayMenuItems;
->>>>>>> 9ac2fd2bdcee6f99290c73cceb73adc9a7932690
 };
