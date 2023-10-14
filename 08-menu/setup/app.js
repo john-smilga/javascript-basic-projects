@@ -132,20 +132,10 @@ const displayMenuBtns = () => {
   containerBtn.innerHTML = categoryBtns;
   const filterBtns = containerBtn.querySelectorAll(".filter-btn");
 
-  //highlight first button on page load
-  filterBtns[0].classList.add("btn-active");
-
+  
   //filter items
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      //remove highlight from non-active buttons
-      filterBtns.forEach((otherBtn) => {
-        otherBtn.classList.remove("btn-active");
-      });
-
-      //add highlight to current button
-      e.currentTarget.classList.add("btn-active");
-
       const category = e.currentTarget.dataset.id;
       const menuCategory = menu.filter((menuItem) => {
         if (menuItem.category === category || category === "all") {
@@ -153,6 +143,15 @@ const displayMenuBtns = () => {
         }
       });
       displayMenuItems(menuCategory);
+      //remove highlight from non-active buttons
+      filterBtns.forEach((otherBtn) => {
+        otherBtn.classList.remove("btn-active");
+      });
+      //add highlight to current button
+      e.currentTarget.classList.add("btn-active");
+      
     });
+    //highlight first button on page load
+    filterBtns[0].classList.add("btn-active");
   });
 };

@@ -71,6 +71,14 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "steak dinner",
+    category: "dinner",
+    price: 39.99,
+    img: "./images/item-10.jpeg",
+    desc: "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.",
+  },
 ];
 
 const menuContainer = document.querySelector(".section-center");
@@ -84,7 +92,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //display menu Items
 const displayMenu = (menuItems) => {
-  let displayMenuItems = menuItems
+  const displayMenuItems = menuItems
     .map((item) => {
       return `<div class="menu-item">
     <img class="photo" src=${item.img} alt=${item.title} />
@@ -103,8 +111,9 @@ const displayMenu = (menuItems) => {
   menuContainer.innerHTML = displayMenuItems;
 };
 
-//display menu buttons
+//display menu  by unique category
 const displayFilterBtns = () => {
+  //get unique category values for buttons
   const categories = menu.reduce(
     (values, item) => {
       if (!values.includes(item.category)) {
@@ -115,5 +124,37 @@ const displayFilterBtns = () => {
     ["all"]
   );
 
-  const categoryBtns = categories.map((btn) => {});
+  //display filter buttons
+  const categoryBtns = categories
+    .map((btn) => {
+      return `<button data-id=${btn} type="button" class="filter-btn">${btn}</button>`;
+    })
+    .join("");
+  btnContainer.innerHTML = categoryBtns;
+  setUpFilterBtns();
+};
+
+//filter menu by button category and add event listners
+
+const setUpFilterBtns = () => {
+  const filterBtns = btnContainer.querySelectorAll(".filter-btn");
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      btn = e.currentTarget.dataset.id;
+      const filterItems = menu.filter((item) => {
+        if (item.category === btn || btn === "all") {
+          return item;
+        }
+      });
+      displayMenu(filterItems);
+
+      //remove active status to other buttons
+      filterBtns.forEach((otherBtn) => otherBtn.classList.remove("btn-active"));
+
+      //add active class to button when clicked
+      e.currentTarget.classList.add("btn-active");
+    });
+    //add active to first button on page load
+    filterBtns[0].classList.add("btn-active");
+  });
 };
