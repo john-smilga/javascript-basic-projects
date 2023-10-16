@@ -105,7 +105,7 @@ const displayMenu = (menuItems) => {
 //filter buttons
 //display buttons on page
 const displayBtns = () => {
-  //pull unique values from categories
+  //pull each unique value from categories
   const categories = menu.reduce(
     (values, item) => {
       if (!values.includes(item.category)) {
@@ -146,7 +146,6 @@ const filterBtn = () => {
 
       //remove active status on non-current active buttons
       filterBtns.forEach((otherBtn) => {
-        console.log(otherBtn);
         otherBtn.classList.remove("btn-active");
       });
 
