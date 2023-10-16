@@ -132,7 +132,6 @@ const displayMenuBtns = () => {
   containerBtn.innerHTML = categoryBtns;
   const filterBtns = containerBtn.querySelectorAll(".filter-btn");
 
-  
   //filter items
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -149,7 +148,6 @@ const displayMenuBtns = () => {
       });
       //add highlight to current button
       e.currentTarget.classList.add("btn-active");
-      
     });
     //highlight first button on page load
     filterBtns[0].classList.add("btn-active");
