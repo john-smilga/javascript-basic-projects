@@ -45,7 +45,7 @@ Variables
   --clr-black: #222;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
-  --transition: all 0.3s linear;
+  --transition: all .3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -231,6 +231,8 @@ h1 {
   justify-content: space-around;
   border: none;
   transition: var(--transition);
+  cursor: pointer;
+
 }
 .switch-btn span {
   display: inline-block;
@@ -255,7 +257,7 @@ h1 {
   left: 50%;
 }
 /* header after */
-/* header::after {
+header::after {
   content: "";
   position: absolute;
   top: 0;
@@ -264,4 +266,4 @@ h1 {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: -1;
-} */
+}
