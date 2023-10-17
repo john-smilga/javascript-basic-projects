@@ -59,11 +59,9 @@ Variables
 Global Styles
 ===============
 */
-html {
-  scroll-behavior: smooth;
-}
+
 *,
-::after,
+html ::after,
 ::before {
   margin: 0;
   padding: 0;
@@ -240,9 +238,9 @@ nav {
   overflow: hidden;
   transition: var(--transition);
 }
-.show-links {
+/* .show-links {
   height: 200px;
-}
+} */
 .links a {
   background: var(--clr-white);
   color: var(--clr-grey-5);
