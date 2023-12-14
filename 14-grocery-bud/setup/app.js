@@ -81,6 +81,7 @@ function addItem(e) {
         editElement.innerHTML= value;
         displayAlert('value changed','success');
          editLocalStorage(editID,value);
+       
       //  addToLocalStorage(id,value);
         //edit local storage
         setBackToDefault();
