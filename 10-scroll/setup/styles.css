@@ -213,9 +213,9 @@ nav {
 .fixed-nav .links a:hover {
   color: var(--clr-secondary);
 }
-/* .fixed-nav .links-container {
+.fixed-nav .links-container {
   height: auto !important;
-} */
+}
 .nav-header {
   display: flex;
   align-items: center;
