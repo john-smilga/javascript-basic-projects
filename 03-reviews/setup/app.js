@@ -34,18 +34,30 @@ const img = document.querySelector("#person-img");
 const author = document.querySelector("#author");
 const job = document.querySelector("#job");
 const info = document.querySelector("#info");
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
-const randomBtn = document.querySelector(".random-btn");
+const btns = document.querySelectorAll("button");
 
 window.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
-  const loadReview = () => {
-    const item = reviews[currentIndex];
-    img.src = item.img;
-    author.textContent = item.name;
-    job.textContent = item.job;
-    info.textContent = item.text;
-  };
-  loadReview();
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.className === "next-btn") {
+        currentIndex =
+          currentIndex + 1 >= reviews.length ? 0 : currentIndex + 1;
+      } else if (btn.className === "prev-btn") {
+        currentIndex =
+          currentIndex - 1 < 0 ? reviews.length - 1 : currentIndex - 1;
+      } else if (btn.className === "random-btn") {
+        currentIndex = Math.floor(Math.random() * reviews.length);
+      }
+      showPerson(currentIndex);
+    });
+  });
 });
+
+const showPerson = (person) => {
+  const item = reviews[person];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+};
