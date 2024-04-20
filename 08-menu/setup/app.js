@@ -72,3 +72,65 @@ const menu = [
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
 ];
+
+const sectionContainer = document.querySelector('.section-center');
+const btnContainer = document.querySelectorAll('.filter-btn');
+
+//load-items
+window.addEventListener('DOMContentLoaded',function(){
+   displayMenuItems(menu);
+})
+
+
+//filter-items
+for(let i=0;i<btnContainer.length;i++)
+{
+  const categoryWise = btnContainer[i];
+  categoryWise.addEventListener('click',function(event){
+    const category = event.target.textContent.toLowerCase();
+    const filteredMenu = filterMenuByCategory(category);
+    displayMenuItems(filteredMenu);
+    })
+  
+}
+function filterMenuByCategory(category) {
+  if (category === 'all') {
+    return menu; // Return the entire menu if 'All' is selected
+  } else {
+    return menu.filter(function (item) {
+      return item.category === category;
+    });
+  }
+}
+
+
+
+function displayMenuItems(menuItems){
+  let displayMenu = menuItems.map(function(item){
+
+    return `<article class="menu-item">
+    <img src=${item.img} class="photo" alt=${item.title}>
+    <div class="item-info">
+      <header>
+        <h4>${item.title}</h4>
+        <h4 class="price">${item.price}</h4>
+      </header>
+      <p class="item-text">${item.desc}</p>
+    </div>
+  </article>`;
+  
+  })
+  
+  displayMenu = displayMenu.join('');
+  // console.log(displayMenu)
+  sectionContainer.innerHTML = displayMenu
+  
+}
+
+
+
+
+
+
+
+
