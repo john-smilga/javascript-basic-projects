@@ -1,5 +1,5 @@
 const productDOM = document.querySelector('.product');
-const url = 'https://course-api.com/javascript-store-single-product';
+const url = 'https://www.course-api.com/javascript-store-single-product';
 
 const fetchProduct = async () => {
   try {

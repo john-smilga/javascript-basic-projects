@@ -27,11 +27,11 @@
 
 #### API Docs
 
-- (Course API)[https://course-api.com/]
+- (Course API)[https://www.course-api.com/]
 
-- (Products)[https://course-api.com/javascript-store-products]
+- (Products)[https://www.course-api.com/javascript-store-products]
 
-- (Single Product)[https://course-api.com/javascript-store-single-product?id=rec43w3ipXvP28vog]
+- (Single Product)[https://www.course-api.com/javascript-store-single-product?id=rec43w3ipXvP28vog]
 
 #### Fetch Products
 
