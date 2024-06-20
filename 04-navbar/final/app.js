@@ -4,7 +4,9 @@
 // remove - remove class
 // toggle - toggles class
 
-const navToggle = document.querySelector(".nav-toggle");
+const navToggle = document.getElementById("nav-toggle");
+navToggle.style.transform = 'rotate(0deg)';
+
 const links = document.querySelector(".links");
 
 navToggle.addEventListener("click", function () {
@@ -16,5 +18,12 @@ navToggle.addEventListener("click", function () {
   // } else {
   //   links.classList.add("show-links");
   // }
+
+  if (navToggle.style.transform == 'rotate(0deg)') {
+    navToggle.style.transform = 'rotate(90deg)';
+  } else if (navToggle.style.transform == 'rotate(90deg)') {
+    navToggle.style.transform = 'rotate(0deg)';
+  }
+
   links.classList.toggle("show-links");
 });
