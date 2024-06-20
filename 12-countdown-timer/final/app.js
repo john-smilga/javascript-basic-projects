@@ -35,14 +35,22 @@ const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
 // let futureDate = new Date(2020, 3, 24, 11, 30, 0);
 
 const year = futureDate.getFullYear();
-const hours = futureDate.getHours();
-const minutes = futureDate.getMinutes();
+const hours = format(futureDate.getHours());
+const minutes = format(futureDate.getMinutes());
 
 let month = futureDate.getMonth();
 month = months[month];
 const weekday = weekdays[futureDate.getDay()];
 const date = futureDate.getDate();
 giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`;
+
+// when a number is less than 10, add a 0 in front of it
+function format(item) {
+  if (item < 10) {
+    return (item = `0${item}`);
+  }
+  return item;
+}
 
 const futureTime = futureDate.getTime();
 function getRemaindingTime() {
@@ -66,12 +74,7 @@ function getRemaindingTime() {
 
   // set values array
   const values = [days, hours, minutes, seconds];
-  function format(item) {
-    if (item < 10) {
-      return (item = `0${item}`);
-    }
-    return item;
-  }
+  
 
   items.forEach(function (item, index) {
     item.innerHTML = format(values[index]);
