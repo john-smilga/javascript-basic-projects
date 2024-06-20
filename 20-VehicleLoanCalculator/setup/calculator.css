@@ -1,0 +1,53 @@
+body{
+    padding:20px;
+  }
+  
+  #loanCalc input{
+    padding:10px;
+    display:block;
+  }
+  
+  
+  .paymentCalc{
+    background-color: #f7f7f7;
+    border: 1px solid #d3d3d3;
+    padding: 35px 35px;
+    overflow: auto;
+    position: relative;
+    left: 220;
+    width:fit-content;
+    justify-content: center;
+  }
+  
+  .calcBtn{
+    display:inline-block;
+    background:#c62233;
+    color:#fff;
+    text-align:center;
+    padding:10px 20px;
+    border-radius: 3px;
+   
+  }
+  
+  #paymentResults{
+    display: none;
+    background:#fff;
+    padding: 30px 60px 36px 60px;
+    border:1px solid lightgrey;
+    margin-top:88px;
+  }
+
+  .output{
+      text-shadow: 2px;
+      font-weight: bold;
+      font-size: large;
+      width: 170;
+      align-items: flex-end;
+      text-align: right;
+  }
+
+  label{
+      font-size: medium;
+  }
+  
+  
