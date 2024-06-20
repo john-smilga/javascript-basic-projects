@@ -10,6 +10,7 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 
 ## You can see all projects in action here
 
+## Link for the Project
 [Projects](https://www.vanillajavascriptprojects.com/)
 
 1. Color Flipper
