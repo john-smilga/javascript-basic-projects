@@ -26,9 +26,9 @@ function carousel() {
   // working with buttons
 
   if (counter < slides.length - 1) {
-    nextBtn.style.display = "block";
+    nextBtn.style.visibility = "visible";
   } else {
-    nextBtn.style.display = "none";
+    nextBtn.style.visibility = "hidden";
   }
   if (counter > 0) {
     prevBtn.style.display = "block";

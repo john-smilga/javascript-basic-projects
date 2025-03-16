@@ -223,20 +223,22 @@ Slider
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.slide:nth-child(3) {
+.slide:nth-child(n) {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("./img-2.jpeg") center/cover no-repeat;
 }
 .btn-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 0.75rem;
 }
 .prevBtn,
 .nextBtn {
   background: transparent;
-  border-color: transparent;
-  font-size: 1.75rem;
+  border-color: var(--clr-grey-5); /*transparent*/
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem; /*1.75rem*/
+  border-radius: 0.5rem;
   cursor: pointer;
   margin: 0 0.25rem;
   text-transform: capitalize;
