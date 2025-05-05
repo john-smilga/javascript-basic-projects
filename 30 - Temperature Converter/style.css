@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Gothic+Expanded+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    background: #143D60;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background: #F1F0E9;
+    padding: 20px;
+    width: 370px;
+    border-radius: 5px;
+}
+.container h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.container .inputFields{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.container input{
+    border: 1px solid #ccc;
+    background: none;
+    outline: none;
+    font-size: 15px;
+    padding: 3px 10px;
+}
+.container select {
+    padding: 3px 30px 3px 10px;
+    font-size: 15px;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="black" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 6px center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.container button{
+    padding: 5px;
+    font-size: 15.5px;
+    border: none;
+    outline: none;
+    background: #255F38;
+    color: white;
+    font-weight: 450;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.container h2{
+    font-size: 23px;
+    font-family: 'Cascadia mono';
+}
+@media (max-width:750px){
+    .container{
+        width: 350px;
+    }
+    .container input{
+        width: 185px;
+    }
+    .container select{
+        width: 120px;
+        padding: 3px 25px 3px 10px;
+    }
+}

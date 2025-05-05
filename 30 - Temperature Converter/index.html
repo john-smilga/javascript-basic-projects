@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter | WebDev Journey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <div class="inputFields">
+            <input type="text" placeholder="Enter Degree" id="degreeInput">
+            <select name="Scale" id="ScaleInput">
+                <option value="Fehrenheit" selected>Fehrenheit</option>
+                <option value="Celcius">Celcius</option>
+            </select>
+        </div>
+        <button onclick="Convert()">Convert</button>
+        <h2 class="showTemperature"></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
