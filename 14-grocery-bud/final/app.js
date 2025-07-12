@@ -1,7 +1,7 @@
 // ****** select items **********
 
 const form = document.querySelector(".grocery-form");
-const alert = document.querySelector(".alert");
+const alertBox = document.querySelector(".alert"); //renamed
 const grocery = document.getElementById("grocery");
 const submitBtn = document.querySelector(".submit-btn");
 const container = document.querySelector(".grocery-container");
@@ -75,14 +75,14 @@ function addItem(e) {
 }
 // display alert
 function displayAlert(text, action) {
-  alert.textContent = text;
-  alert.classList.add(`alert-${action}`);
-  // remove alert
+  alertBox.textContent = text;
+  alertBox.classList.add(`alert-${action}`);
   setTimeout(function () {
-    alert.textContent = "";
-    alert.classList.remove(`alert-${action}`);
+    alertBox.textContent = "";
+    alertBox.classList.remove(`alert-${action}`);
   }, 1000);
 }
+
 
 // clear items
 function clearItems() {
