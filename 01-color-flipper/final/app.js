@@ -4,7 +4,7 @@ const color = document.querySelector(".color");
 
 
 // Assignment change by Lovesh Sharma
-const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
+const colors = ["green", "red", "rgba(133,122,200)", "#c9694fff"];
 
 
 btn.addEventListener("click", function () {
