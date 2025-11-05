@@ -1,3 +1,5 @@
+// Edited by Pranjal, 2025-11-05
+
 const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
