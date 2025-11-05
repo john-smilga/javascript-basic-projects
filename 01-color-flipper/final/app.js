@@ -14,4 +14,5 @@ function getRandomNumber() {
   return Math.floor(Math.random() * colors.length);
 }
 
-// Edited by Priyanshi Negi
+// Edited by Priyanshi Negi Today
+
