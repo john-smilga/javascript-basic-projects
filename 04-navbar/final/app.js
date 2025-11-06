@@ -6,6 +6,9 @@
 
 const navToggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".links");
+// This change was made by Tanushree Nayal
+
+const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
 
 navToggle.addEventListener("click", function () {
   // console.log(links.classList);
