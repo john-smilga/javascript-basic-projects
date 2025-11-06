@@ -16,19 +16,30 @@
     <!-- hero -->
     <header class="hero">
       <div class="banner">
-        <h1>modal project</h1>
-        <button class="btn modal-btn">
-          open modal
-        </button>
+        <h1>Modal Project</h1> 
+        <button class="btn modal-btn">Open Modal</button>
       </div>
     </header>
+
     <!-- modal -->
     <div class="modal-overlay">
       <div class="modal-container">
-        <h3>modal content</h3>
-        <button class="close-btn"><i class="fas fa-times"></i></button>
+        <div class="modal-header">
+          <h2 class="modal-title">Modal</h2>
+          <button class="close-btn" title="Close Modal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <!--Modified by Nirbhay-->
+        <div class="modal-body">
+          <img src="logo.svg" alt="LOGO" width="20" height="20">
+          <p>
+            This is a simple modal example. Click the close button to dismiss it.
+          </p>
+        </div>
       </div>
     </div>
+
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
