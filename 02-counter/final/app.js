@@ -1,4 +1,5 @@
-// set inital value to zero
+//Edited by Mukunda, 2025-11-06
+// // set inital value to zero
 let count = 0;
 // select value and buttons
 const value = document.querySelector("#value");
