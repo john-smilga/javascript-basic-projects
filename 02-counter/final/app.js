@@ -27,3 +27,5 @@ btns.forEach(function (btn) {
     value.textContent = count;
   });
 });
+
+//Edited by Rohit
