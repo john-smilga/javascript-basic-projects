@@ -3,71 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar</title>
+    <title>Modern Navbar</title>
     <!-- font-awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <!-- styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay"></div>
+    
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-center">
         <!-- nav header -->
         <div class="nav-header">
-          <img src="./logo.svg" class="logo" alt="logo" />
-          <button class="nav-toggle">
-            <i class="fas fa-bars"></i>
+          <a href="index.html" class="logo-link">
+            <img src="./logo.svg" class="logo" alt="Logo" />
+          </a>
+          <button 
+            class="nav-toggle" 
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span class="hamburger-icon">
+              <i class="fas fa-bars"></i>
+            </span>
+            <span class="close-icon">
+              <i class="fas fa-times"></i>
+            </span>
           </button>
         </div>
         <!-- links -->
-        <ul class="links">
+        <ul class="links" id="nav-links">
           <li>
-            <a href="index.html">home</a>
+            <a href="index.html" class="nav-link active">
+              <span>home</span>
+            </a>
           </li>
           <li>
-            <a href="about.html">about</a>
+            <a href="about.html" class="nav-link">
+              <span>about</span>
+            </a>
           </li>
           <li>
-            <a href="projects.html">projects</a>
+            <a href="projects.html" class="nav-link">
+              <span>projects</span>
+            </a>
           </li>
           <li>
-            <a href="contact.html">contact</a>
+            <a href="contact.html" class="nav-link">
+              <span>contact</span>
+            </a>
           </li>
         </ul>
         <!-- social media -->
-        <ul class="social-icons">
+        <ul class="social-icons" aria-label="Social media links">
           <li>
-            <a href="https://www.twitter.com">
+            <a 
+              href="https://www.facebook.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
               <i class="fab fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com">
+            <a 
+              href="https://www.twitter.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
               <i class="fab fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com">
+            <a 
+              href="https://www.behance.net" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Behance"
+            >
               <i class="fab fa-behance"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com">
+            <a 
+              href="https://www.linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com">
-              <i class="fab fa-sketch"></i>
+            <a 
+              href="https://www.github.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
             </a>
           </li>
         </ul>
       </div>
     </nav>
+
+    <!-- Hero Section for Better Context -->
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">Welcome to Modern Design</h1>
+          <p class="hero-text">
+            Experience a beautifully crafted responsive navbar with smooth animations 
+            and modern UI/UX principles.
+          </p>
+          <button class="cta-button">Get Started</button>
+        </div>
+      </section>
+    </main>
+
     <!-- javascript -->
     <script src="app.js"></script>
   </body>

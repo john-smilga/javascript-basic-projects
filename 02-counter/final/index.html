@@ -11,12 +11,16 @@
   <body>
     <main>
       <div class="container">
-        <h1>counter</h1>
-        <span id="value">0</span>
-        <div class="button-container">
-          <button class="btn decrease">decrease</button>
-          <button class="btn reset">reset</button>
-          <button class="btn increase">increase</button>
+        <h1>Counter</h1>
+        <div class="top-row">
+          <p class="subtitle">A small, delightful counter with accessible controls</p>
+          <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle color palette">Theme</button>
+        </div>
+        <span id="value" aria-live="polite">0</span>
+        <div class="button-container" role="group" aria-label="counter controls">
+          <button class="btn decrease" aria-label="decrease">-</button>
+          <button class="btn reset" aria-label="reset">Reset</button>
+          <button class="btn increase" aria-label="increase">+</button>
         </div>
       </div>
     </main>

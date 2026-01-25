@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dark Mode</title>
+    <meta name="description" content="Dark mode toggle blog with modern UI" />
+    <title>Dark Mode - overreacted</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -12,13 +13,17 @@
       <nav>
         <div class="nav-center">
           <span>overreacted</span>
-          <button class="btn">toggle</button>
+          <div class="toggle-container">
+            <label for="theme-toggle" class="toggle-label">Dark Mode</label>
+            <label class="switch">
+              <input type="checkbox" id="theme-toggle" aria-label="Toggle dark mode" />
+              <span class="slider"></span>
+            </label>
+          </div>
         </div>
       </nav>
       <section class="articles">
-        <!-- single post -->
-
-        <!-- end of single post -->
+        <!-- Articles will be dynamically inserted here -->
       </section>
     </main>
     <!-- moment -->

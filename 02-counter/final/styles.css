@@ -68,10 +68,11 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
+  background: linear-gradient(135deg, var(--clr-primary-9), var(--clr-primary-10));
   color: var(--clr-grey-1);
   line-height: 1.5;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
+  -webkit-font-smoothing:antialiased;
 }
 ul {
   list-style-type: none;
@@ -164,27 +165,138 @@ main {
 }
 .container {
   text-align: center;
+  background: var(--clr-white);
+  padding: 2.25rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--light-shadow);
+  width: min(90%, 420px);
+  transform: translateY(-1%);
 }
-#value {
-  font-size: 6rem;
-  font-weight: bold;
+
+/* top row: subtitle + theme toggle */
+.top-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
 }
-.btn {
-  text-transform: uppercase;
+.theme-toggle {
   background: transparent;
-  color: var(--clr-black);
-  padding: 0.375rem 0.75rem;
-  letter-spacing: var(--spacing);
+  border: 1px solid var(--clr-grey-8);
+  color: var(--clr-grey-2);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.825rem;
+}
+.theme-toggle[aria-pressed="true"] {
+  background: var(--clr-primary-9);
+  color: var(--clr-white);
+  border-color: transparent;
+}
+/* value */
+#value {
+  display: block;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: var(--clr-primary-2);
+  margin: 0.5rem 0 1rem;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 18px rgba(32, 45, 70, 0.08);
+}
+
+/* animation when value changes */
+.pop {
+  animation: pop 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+/* subtitle */
+.subtitle {
+  color: var(--clr-grey-5);
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* buttons */
+.btn {
+  text-transform: none;
+  color: var(--clr-white);
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.02em;
   display: inline-block;
   transition: var(--transition);
-  font-size: 0.875rem;
-  border: 2px solid var(--clr-black);
+  font-size: 1rem;
+  border: 0;
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
-  margin: 0.5rem;
+  border-radius: 8px;
+  margin: 0.25rem;
+  min-width: 84px;
+}
+.btn:focus {
+  outline: 3px solid rgba(32, 124, 229, 0.18);
+  outline-offset: 2px;
+}
+.btn.increase {
+  background: linear-gradient(180deg, var(--clr-green-light), var(--clr-green-dark));
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.18);
+}
+.btn.decrease {
+  background: linear-gradient(180deg, var(--clr-red-light), var(--clr-red-dark));
+  box-shadow: 0 8px 20px rgba(211, 47, 47, 0.18);
+}
+.btn.reset {
+  background: linear-gradient(180deg, var(--clr-primary-8), var(--clr-primary-5));
+  color: var(--clr-grey-1);
+  box-shadow: 0 6px 16px rgba(10, 102, 194, 0.12);
 }
 .btn:hover {
-  color: var(--clr-white);
-  background: var(--clr-black);
+  transform: translateY(-3px);
+  filter: brightness(1.02);
+}
+
+/* button container spacing */
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    padding: 3rem 3.5rem;
+  }
+  #value {
+    font-size: 6rem;
+  }
+  .btn {
+    min-width: 110px;
+    font-size: 1.05rem;
+  }
+}
+
+/* alternate palette applied when body[data-theme="alt"] */
+body[data-theme="alt"] {
+  --clr-primary-1: hsl(285, 40%, 12%);
+  --clr-primary-2: hsl(285, 55%, 28%);
+  --clr-primary-3: hsl(285, 55%, 38%);
+  --clr-primary-4: hsl(285, 60%, 48%);
+  --clr-primary-5: hsl(285, 65%, 58%);
+  --clr-primary-6: hsl(285, 75%, 68%);
+  --clr-primary-7: hsl(285, 80%, 76%);
+  --clr-primary-8: hsl(285, 85%, 83%);
+  --clr-primary-9: hsl(285, 90%, 90%);
+  --clr-primary-10: hsl(285, 95%, 96%);
+  --clr-green-dark: hsl(190, 70%, 30%);
+  --clr-green-light: hsl(190, 70%, 60%);
+  --clr-red-dark: hsl(10, 70%, 35%);
+  --clr-red-light: hsl(10, 70%, 62%);
 }
