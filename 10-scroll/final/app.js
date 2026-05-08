@@ -42,8 +42,6 @@ window.addEventListener("scroll", function () {
   // setup back to top link
 
   if (scrollHeight > 500) {
-    console.log("helo");
-
     topLink.classList.add("show-link");
   } else {
     topLink.classList.remove("show-link");
