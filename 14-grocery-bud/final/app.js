@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", setupItems);
 // add item
 function addItem(e) {
   e.preventDefault();
-  const value = grocery.value;
+  const value = grocery.value.trim();
   const id = new Date().getTime().toString();
 
   if (value !== "" && !editFlag) {
@@ -34,7 +34,7 @@ function addItem(e) {
     attr.value = id;
     element.setAttributeNode(attr);
     element.classList.add("grocery-item");
-    element.innerHTML = `<p class="title">${value}</p>
+    element.innerHTML = `<p class="title"></p>
             <div class="btn-container">
               <!-- edit btn -->
               <button type="button" class="edit-btn">
@@ -46,6 +46,7 @@ function addItem(e) {
               </button>
             </div>
           `;
+    element.querySelector('.title').textContent = value;
     // add event listeners to both buttons;
     const deleteBtn = element.querySelector(".delete-btn");
     deleteBtn.addEventListener("click", deleteItem);
@@ -63,7 +64,7 @@ function addItem(e) {
     // set back to default
     setBackToDefault();
   } else if (value !== "" && editFlag) {
-    editElement.innerHTML = value;
+    editElement.textContent = value;
     displayAlert("value changed", "success");
 
     // edit  local storage
@@ -121,7 +122,7 @@ function editItem(e) {
   // set edit item
   editElement = e.currentTarget.parentElement.previousElementSibling;
   // set form value
-  grocery.value = editElement.innerHTML;
+  grocery.value = editElement.textContent;
   editFlag = true;
   editID = element.dataset.id;
   //
@@ -195,7 +196,7 @@ function createListItem(id, value) {
   attr.value = id;
   element.setAttributeNode(attr);
   element.classList.add("grocery-item");
-  element.innerHTML = `<p class="title">${value}</p>
+  element.innerHTML = `<p class="title"></p>
             <div class="btn-container">
               <!-- edit btn -->
               <button type="button" class="edit-btn">
@@ -207,6 +208,7 @@ function createListItem(id, value) {
               </button>
             </div>
           `;
+  element.querySelector('.title').textContent = value;
   // add event listeners to both buttons;
   const deleteBtn = element.querySelector(".delete-btn");
   deleteBtn.addEventListener("click", deleteItem);
